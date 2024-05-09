@@ -1,0 +1,118 @@
+@use "../sass/variables" as *;
+@use "../sass/mixins" as m;
+
+.about-page {
+	flex-direction: column;
+	justify-items: space-around;
+	flex-wrap: wrap;
+	height: 100%;
+	.about-section {
+		display: flex;
+
+		justify-content: space-around;
+	}
+	.skills-courses {
+		display: flex;
+
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		@include m.screen("small") {
+			flex-wrap: wrap;
+		}
+		.section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: $secondary20;
+
+			min-width: 45%;
+			min-height: 100%;
+			justify-content: center;
+			margin: 2em;
+			padding: 1em;
+			@include m.border-rounded;
+			@include m.screen("small") {
+				width: 100%;
+			}
+
+			.content {
+				display: flex;
+
+				justify-content: center;
+				margin: auto;
+				align-items: center;
+				width: 100%;
+
+				&.c {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-around;
+				}
+			}
+		}
+	}
+	.personal-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		background-color: $secondary20;
+		@include m.border-rounded;
+		p {
+			text-align: center;
+			color: white;
+			letter-spacing: 2px;
+			line-height: 2em;
+
+			padding: 20px;
+			width: 80%;
+		}
+
+		.personal-sections {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+
+			.personal-section {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+
+				width: 30%;
+				margin: 20px;
+				padding: 1em;
+				background-color: $secondary30;
+				@include m.border-rounded;
+				@include m.screen("small") {
+					width: 100%;
+				}
+				ul {
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					// align-items: center;
+
+					li {
+						display: flex;
+						height: 100%;
+						margin-bottom: 10px;
+						align-items: center;
+						margin-bottom: 1em;
+						justify-content: flex-start;
+						.list-icon {
+							margin-right: 2em;
+							color: $accent;
+						}
+					}
+				}
+			}
+		}
+	}
+}

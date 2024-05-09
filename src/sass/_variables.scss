@@ -1,0 +1,203 @@
+// $darkBackground: rgb(0, 10, 31);
+// $lightBackground: #a2a2a2;
+// $lightAccent: #8675ff;
+// $darkAccent: rgb(5, 0, 54);
+// $primaryColor: #2e09b3;
+// $lightTextColor: rgb(215, 224, 255);
+// $darkTextColor: rgb(5, 0, 17);
+@function adjust-alpha($color, $percentage) {
+	@return rgba(red($color), green($color), blue($color), $percentage);
+}
+
+$light-text: #e6eef9;
+$dark-text: #060e19;
+
+$text: hsl(230, 14%, 91%);
+$background: hsl(223, 33%, 4%);
+$primary: hsl(221, 100%, 73%);
+
+$secondary: hsl(221, 69%, 33%);
+$accent: hsl(177, 100%, 50%);
+
+$base-font-size: 16px;
+$large-font-size: 18px;
+$breakpoint-small: 1000px;
+
+$text-50: hsl(223, 28%, 95%);
+$text-100: hsl(222, 25%, 90%);
+$text-200: hsl(224, 25%, 80%);
+$text-300: hsl(223, 25%, 70%);
+$text-400: hsl(222, 26%, 60%);
+$text-500: hsl(223, 26%, 50%);
+$text-600: hsl(222, 26%, 40%);
+$text-700: hsl(223, 25%, 30%);
+$text-800: hsl(224, 25%, 20%);
+$text-900: hsl(222, 25%, 10%);
+$text-950: hsl(223, 28%, 5%);
+
+$background-shade-50: hsl(233, 36%, 95%);
+$background-shade-100: hsl(234, 37%, 90%);
+$background-shade-200: hsl(233, 35%, 80%);
+$background-shade-300: hsl(233, 36%, 70%);
+$background-shade-400: hsl(233, 36%, 60%);
+$background-shade-500: hsl(233, 36%, 50%);
+$background-shade-600: hsl(233, 36%, 40%);
+$background-shade-700: hsl(233, 36%, 30%);
+$background-shade-800: hsl(233, 35%, 20%);
+$background-shade-900: hsl(234, 37%, 10%);
+$background-shade-950: hsl(233, 36%, 5%);
+
+$primary-shade-50: hsl(219, 100%, 95%);
+$primary-shade-100: hsl(221, 100%, 90%);
+$primary-shade-200: hsl(221, 100%, 80%);
+$primary-shade-300: hsl(221, 100%, 70%);
+$primary-shade-400: hsl(221, 100%, 60%);
+$primary-shade-500: hsl(221, 100%, 50%);
+$primary-shade-600: hsl(221, 100%, 40%);
+$primary-shade-700: hsl(221, 100%, 30%);
+$primary-shade-800: hsl(221, 100%, 20%);
+$primary-shade-900: hsl(221, 100%, 10%);
+$primary-shade-950: hsl(222, 100%, 5%);
+
+$secondary-shade-50: hsl(220, 69%, 95%);
+$secondary-shade-100: hsl(221, 69%, 90%);
+$secondary-shade-200: hsl(221, 69%, 80%);
+$secondary-shade-300: hsl(221, 69%, 70%);
+$secondary-shade-400: hsl(221, 69%, 60%);
+$secondary-shade-500: hsl(221, 69%, 50%);
+$secondary-shade-600: hsl(221, 69%, 40%);
+$secondary-shade-700: hsl(221, 69%, 30%);
+$secondary-shade-800: hsl(221, 69%, 20%);
+$secondary-shade-900: hsl(221, 69%, 10%);
+$secondary-shade-950: hsl(220, 69%, 5%);
+
+$accent-shade-50: hsl(178, 100%, 95%);
+$accent-shade-100: hsl(176, 100%, 90%);
+$accent-shade-200: hsl(177, 100%, 80%);
+$accent-shade-300: hsl(177, 100%, 70%);
+$accent-shade-400: hsl(177, 100%, 60%);
+$accent-shade-500: hsl(177, 100%, 50%);
+$accent-shade-600: hsl(177, 100%, 40%);
+$accent-shade-700: hsl(177, 100%, 30%);
+$accent-shade-800: hsl(177, 100%, 20%);
+$accent-shade-900: hsl(176, 100%, 10%);
+$accent-shade-950: hsl(175, 100%, 5%);
+
+//Primary Shades:
+
+$primary5: adjust-alpha($primary, 5%);
+$primary10: adjust-alpha($primary, 10%);
+$primary15: adjust-alpha($primary, 15%);
+$primary20: adjust-alpha($primary, 20%);
+$primary25: adjust-alpha($primary, 25%);
+$primary30: adjust-alpha($primary, 30%);
+$primary35: adjust-alpha($primary, 35%);
+$primary40: adjust-alpha($primary, 40%);
+$primary45: adjust-alpha($primary, 45%);
+$primary50: adjust-alpha($primary, 50%);
+$primary55: adjust-alpha($primary, 55%);
+$primary60: adjust-alpha($primary, 60%);
+$primary65: adjust-alpha($primary, 65%);
+$primary70: adjust-alpha($primary, 70%);
+$primary75: adjust-alpha($primary, 75%);
+$primary80: adjust-alpha($primary, 80%);
+$primary85: adjust-alpha($primary, 85%);
+$primary90: adjust-alpha($primary, 90%);
+$primary95: adjust-alpha($primary, 95%);
+
+//Secondary Shades:
+
+$secondary5: adjust-alpha($secondary, 5%);
+$secondary10: adjust-alpha($secondary, 10%);
+$secondary15: adjust-alpha($secondary, 15%);
+$secondary20: adjust-alpha($secondary, 20%);
+$secondary25: adjust-alpha($secondary, 25%);
+$secondary30: adjust-alpha($secondary, 30%);
+$secondary35: adjust-alpha($secondary, 35%);
+$secondary40: adjust-alpha($secondary, 40%);
+$secondary45: adjust-alpha($secondary, 45%);
+$secondary50: adjust-alpha($secondary, 50%);
+$secondary55: adjust-alpha($secondary, 55%);
+$secondary60: adjust-alpha($secondary, 60%);
+$secondary65: adjust-alpha($secondary, 65%);
+$secondary70: adjust-alpha($secondary, 70%);
+$secondary75: adjust-alpha($secondary, 75%);
+$secondary80: adjust-alpha($secondary, 80%);
+$secondary85: adjust-alpha($secondary, 85%);
+$secondary90: adjust-alpha($secondary, 90%);
+$secondary95: adjust-alpha($secondary, 95%);
+
+//accent shades:
+
+$accent5: adjust-alpha($accent, 5%);
+$accent10: adjust-alpha($accent, 10%);
+$accent15: adjust-alpha($accent, 15%);
+$accent20: adjust-alpha($accent, 20%);
+$accent25: adjust-alpha($accent, 25%);
+$accent30: adjust-alpha($accent, 30%);
+$accent35: adjust-alpha($accent, 35%);
+$accent40: adjust-alpha($accent, 40%);
+$accent45: adjust-alpha($accent, 45%);
+$accent50: adjust-alpha($accent, 50%);
+$accent55: adjust-alpha($accent, 55%);
+$accent60: adjust-alpha($accent, 60%);
+$accent65: adjust-alpha($accent, 65%);
+$accent70: adjust-alpha($accent, 70%);
+$accent75: adjust-alpha($accent, 75%);
+$accent80: adjust-alpha($accent, 80%);
+$accent85: adjust-alpha($accent, 85%);
+$accent90: adjust-alpha($accent, 90%);
+$accent95: adjust-alpha($accent, 95%);
+
+// fonts:
+// rightous & montserrat
+
+// $themes: (
+//  light: (
+//    text: #040f20,
+//    background: #ddeafd,
+//    primary: #174692,
+//    secondary: #9fb8e0,
+//    accent: #c01636,
+//  ),
+//  dark: (
+//    text: #dfeafb,
+//    background: #020f22,
+//    primary: #6d9de8,
+//    secondary: #1f3860,
+//    accent: #e93f5e,
+//  ),
+// );
+// $themes: (
+//  light: (
+//    text: #061314,
+//    background: #f4fbfb,
+//    primary: #43c7cb,
+//    secondary: #98b2e2,
+//    accent: #6f79d8,
+//  ),
+//  dark: (
+//    text: #ebf8f9,
+//    background: #040c0c,
+//    primary: #34b8bc,
+//    secondary: #1d3768,
+//    accent: #273290,
+//  ),
+// );
+
+// $themes: (
+//  light: (
+//    text: #011e19,
+//    background: #fafffe,
+//    primary: #22f7ba,
+//    secondary: #75a8fa,
+//    accent: #445ff8,
+//  ),
+//  dark: (
+//    text: #e1fef9,
+//    background: #000504,
+//    primary: #08dda1,
+//    secondary: #05388a,
+//    accent: #0722bb,
+//  ),
+// );

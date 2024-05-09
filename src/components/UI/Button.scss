@@ -1,0 +1,92 @@
+@use "../../sass/mixins" as m;
+@use "../../sass/variables" as *;
+
+.btn-extend {
+	border: none;
+	@include m.border-rounded;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition-duration: 0.4s;
+	color: black;
+	cursor: pointer;
+	position: relative;
+	background: white;
+	overflow: hidden;
+	margin: 5px;
+
+	.btn-icon {
+		width: 1.5em;
+		height: 1.5em;
+		transition-duration: 0.3s;
+	}
+
+	.btn-text {
+		position: absolute;
+
+		width: 100px;
+		font-size: 1em;
+		font-weight: 600;
+		opacity: 0;
+		transition-duration: 0.4s;
+	}
+	&:hover {
+		width: 120px;
+		transition-duration: 0.4s;
+		@include m.border-rounded;
+
+		.btn-icon {
+			opacity: 0;
+			transition-duration: 0.3s;
+		}
+
+		.btn-text {
+			opacity: 1;
+			transition-duration: 0.4s;
+		}
+	}
+}
+
+.btn {
+	border: none;
+	@include m.border-rounded;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 0.5em 2em;
+
+	flex-wrap: wrap;
+
+	.btn-icon {
+		width: 25px;
+		height: 25px;
+		color: $accent;
+	}
+	.btn-text {
+		max-width: 100px;
+		font-size: 1em;
+	}
+}
+.btn-primary {
+	background-color: $primary;
+	color: $dark-text;
+	transition: transform ease 0.2s, box-shadow ease 0.2s;
+	letter-spacing: 2px;
+	font-weight: bold;
+	width: fit-content;
+
+	&:hover {
+		transform: translate(0, -3px);
+		box-shadow: 0 20px 80px -10px $primary;
+	}
+}
+
+.btn-secondary {
+	background-color: $secondary30;
+	color: $light-text;
+	border: none;
+}

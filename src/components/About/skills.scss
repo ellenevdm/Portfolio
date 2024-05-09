@@ -1,0 +1,54 @@
+@use "../../sass/variables" as *;
+@use "../../sass/mixins" as m;
+
+.about-section {
+	text-align: center;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+}
+
+.skill {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	margin: 10px;
+	width: 60px;
+	height: 60px;
+	.skill-logo {
+		width: 40px;
+		height: 40px;
+		@include m.border-rounded;
+		margin-bottom: 5px;
+	}
+	.tooltip {
+		opacity: 0;
+		font-size: small;
+		color: white;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition-duration: 0.2s;
+		pointer-events: none;
+		letter-spacing: 0.5px;
+	}
+
+	&:hover .tooltip {
+		top: -40px;
+		opacity: 1;
+		transition-duration: 0.3s;
+	}
+	&:hover .skill-logo {
+		transform: rotate(360deg);
+		transition-duration: 1s;
+	}
+}

@@ -1,0 +1,72 @@
+.footer {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	border: 1px solid white;
+	background-color: black;
+	padding: 10px;
+}
+
+.footer-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	list-style: none;
+	width: 60%;
+
+	.icon-content {
+		margin: 0 10px;
+		position: relative;
+
+		.logo-tooltip {
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: white;
+			padding: 6px 10px;
+			border-radius: 5px;
+			opacity: 0;
+			visibility: hidden;
+			font-size: 14px;
+			transition: all 0.3s ease;
+			background-color: #161377;
+		}
+
+		&:hover .logo-tooltip {
+			opacity: 1;
+			visibility: visible;
+			top: -50px;
+		}
+
+		a {
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 2.5em;
+			height: 2.5em;
+			border-radius: 5px;
+
+			background-color: transparent;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+			}
+
+			.contact-icon {
+				position: relative;
+				z-index: 1;
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
+}
