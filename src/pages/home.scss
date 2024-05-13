@@ -1,5 +1,4 @@
-@use "../sass/variables" as *;
-@use "../sass/mixins" as m;
+@use "../sass/abstracts" as *;
 .home-page {
 	display: flex;
 	justify-content: center;
@@ -24,8 +23,8 @@
 			align-items: center;
 			justify-content: space-around;
 			margin: 30px 0px;
-			background-color: $secondary20;
-			@include m.border-rounded;
+			background-color: $secondary;
+			@include border-rounded;
 		}
 		.banner {
 			display: flex;
@@ -46,7 +45,7 @@
 				align-items: center;
 				justify-content: center;
 
-				color: purple;
+				color: $primary;
 				width: 100%;
 			}
 			.intro-text {
@@ -62,7 +61,7 @@
 				height: 100%;
 				.key-word {
 					font-weight: 500;
-					color: blueviolet;
+					color: $primary;
 					text-transform: uppercase;
 				}
 			}

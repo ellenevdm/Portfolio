@@ -3,7 +3,6 @@ import "./footer.scss";
 import { LogosGithubIcon } from "../SVGComponents/GithubIcon";
 import { LogosGoogleGmail } from "../SVGComponents/EmailIcon";
 import { LogosLinkedinIcon } from "../SVGComponents/LinkedInIcon";
-import { LogosTelegram } from "../SVGComponents/TelegramIcon";
 import { LogosWhatsappIcon } from "../SVGComponents/WhatsappIcon";
 
 export default function Footer() {

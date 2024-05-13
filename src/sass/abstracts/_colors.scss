@@ -1,0 +1,18 @@
+@use "./mixins" as m;
+
+$text: hsl(224, 94%, 93%);
+$background: hsl(227, 100%, 3%);
+$primary: hsl(225, 83%, 70%);
+$secondary: hsl(224, 88%, 29%);
+$accent: hsl(318, 100%, 58%);
+
+//Alpha variables
+@include m.create-alpha-variables($primary, "primary");
+@include m.create-alpha-variables($secondary, "secondary");
+@include m.create-alpha-variables($accent, "accent");
+
+//Shades
+@include m.create-shades($primary, "primary");
+@include m.create-shades($secondary, "secondary");
+@include m.create-shades($accent, "accent");
+@include m.create-shades($text, "text");

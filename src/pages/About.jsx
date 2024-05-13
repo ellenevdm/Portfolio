@@ -21,11 +21,11 @@ export default function AboutPage() {
 			</div>
 			<div className="about-section skills-courses">
 				<div className="section c">
-					<h2>COURSES</h2>
+					<h3>COURSES</h3>
 					<Courses className="content c" />
 				</div>
 				<div className="section s">
-					<h2>SKILLS</h2>
+					<h3>SKILLS</h3>
 					<Skills className="content s" />
 				</div>
 			</div>

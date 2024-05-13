@@ -7,9 +7,6 @@ import HomePage from "./pages/Home";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 import ProjectsPage from "./pages/Projects";
 import RootLayout from "./pages/Root";
-import reactLogo from "./assets/Svgs/react.svg";
-import { useState } from "react";
-import viteLogo from "/vite.svg";
 
 const router = createBrowserRouter([
 	{

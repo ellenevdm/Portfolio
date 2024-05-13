@@ -1,19 +1,18 @@
-@use "../../sass/mixins" as m;
-@use "../../sass/variables" as *;
+@use "../../sass/abstracts" as *;
 
 .btn-extend {
 	border: none;
-	@include m.border-rounded;
+	@include border-rounded;
 	width: 40px;
 	height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transition-duration: 0.4s;
-	color: black;
+	color: $text;
 	cursor: pointer;
 	position: relative;
-	background: white;
+	background: $primary;
 	overflow: hidden;
 	margin: 5px;
 
@@ -35,7 +34,7 @@
 	&:hover {
 		width: 120px;
 		transition-duration: 0.4s;
-		@include m.border-rounded;
+		@include border-rounded;
 
 		.btn-icon {
 			opacity: 0;
@@ -51,7 +50,7 @@
 
 .btn {
 	border: none;
-	@include m.border-rounded;
+	@include border-rounded;
 	height: 40px;
 	display: flex;
 	align-items: center;
@@ -73,7 +72,7 @@
 }
 .btn-primary {
 	background-color: $primary;
-	color: $dark-text;
+	color: $text;
 	transition: transform ease 0.2s, box-shadow ease 0.2s;
 	letter-spacing: 2px;
 	font-weight: bold;
@@ -86,7 +85,7 @@
 }
 
 .btn-secondary {
-	background-color: $secondary30;
-	color: $light-text;
+	background-color: $secondary;
+	color: $text;
 	border: none;
 }

@@ -1,0 +1,65 @@
+@use "abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: $background;
+	height: 100%;
+	font-size: 16px;
+}
+
+body {
+	color: $text;
+	padding-top: 100px;
+	background-size: cover;
+	height: 100%;
+	max-width: 100%;
+	margin: 0;
+	overflow: scroll;
+	@include font($montserrat);
+}
+
+button {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.page {
+	margin: auto;
+	width: 80%;
+	height: 100%;
+
+	justify-content: center;
+
+	text-align: center;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+
+h1 {
+	@include font($righteous, $heading-1-size);
+	text-transform: uppercase;
+}
+
+h2 {
+	@include font($righteous, $heading-2-size);
+}
+h3 {
+	@include font(
+		$montserrat-italic,
+		$heading-3-size,
+		$font-weight-semibold,
+		$font-italic
+	);
+}

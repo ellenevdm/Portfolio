@@ -1,25 +1,24 @@
-@use "../../sass/variables" as *;
-@use "../../sass/mixins" as m;
+@use "../../sass/abstracts" as *;
 .contact-form {
 	display: flex;
 	flex-direction: column;
 	height: 60%;
 	min-width: 50%;
 	justify-content: space-around;
-	background-color: $primary20;
+	background-color: $secondary;
 	padding: 1rem 2rem;
-	@include m.border-rounded;
+	@include border-rounded;
 	// border: 1px solid $accent;
 
 	font-family: inherit;
 	h1 {
-		color: white;
+		color: $text;
 		font-weight: 400;
 		margin-bottom: 0.5em;
 		text-align: center;
 	}
 	label {
-		color: white;
+		color: $text;
 		font-weight: lighter;
 		margin-bottom: 0.5em;
 	}
@@ -29,14 +28,14 @@
 		flex-direction: column;
 		margin-bottom: 15px;
 		width: 100%;
-		background-color: $secondary-shade-900;
+		background-color: $secondary;
 		padding: 0.75rem 1rem;
-		@include m.border-rounded;
+		@include border-rounded;
 		border: none;
 		margin-top: 5px;
-		font-size: 0.9em;
+		font-size: 1rem;
 		outline: 0;
-		color: $light-text;
+		color: $text;
 	}
 	textarea {
 		min-height: 100px;
@@ -52,7 +51,7 @@
 		display: inline-block;
 		align-self: center;
 		background-color: $primary;
-		@include m.border-rounded;
+		@include border-rounded;
 		font-size: 1em;
 		border: none;
 		z-index: 2;
@@ -64,7 +63,7 @@
 		text-align: center;
 		width: 40%;
 		transition: transform ease 0.2s, box-shadow ease 0.2s;
-		color: $dark-text;
+		color: $text;
 	}
 	.submit:hover {
 		transform: translate(0, -3px);

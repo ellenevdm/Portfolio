@@ -1,5 +1,4 @@
-@use "../../sass/variables" as *;
-@use "../../sass/mixins" as m;
+@use "../../sass/abstracts" as *;
 
 .project-menu {
 	display: flex;
@@ -15,11 +14,11 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: $light-text;
+	color: $text;
 	margin: 8px;
 
-	@include m.border-rounded;
-	background-color: $secondary25;
+	@include border-rounded;
+	background-color: $secondary;
 	transition: 0.7s;
 
 	.project-card-btn {
@@ -32,8 +31,8 @@
 	}
 }
 .project-card:hover {
-	background-color: $secondary-shade-400;
-	color: #fff;
+	background-color: $secondary;
+	color: $text;
 
 	cursor: pointer;
 }

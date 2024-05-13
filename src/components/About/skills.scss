@@ -1,5 +1,4 @@
-@use "../../sass/variables" as *;
-@use "../../sass/mixins" as m;
+@use "../../sass/abstracts" as *;
 
 .about-section {
 	text-align: center;
@@ -26,13 +25,13 @@
 	.skill-logo {
 		width: 40px;
 		height: 40px;
-		@include m.border-rounded;
+		@include border-rounded;
 		margin-bottom: 5px;
 	}
 	.tooltip {
 		opacity: 0;
 		font-size: small;
-		color: white;
+		color: $text;
 
 		display: flex;
 		align-items: center;

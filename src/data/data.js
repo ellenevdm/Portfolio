@@ -128,7 +128,7 @@ export const SKILLS = [
 	},
 	{
 		id: "router",
-		name: "Reat Router",
+		name: "REACT ROUTER",
 		icon: "react-router",
 		level: 3,
 	},

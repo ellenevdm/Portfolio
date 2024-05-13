@@ -1,13 +1,11 @@
-@use "../../sass/mixins" as m;
-@use "../../sass/variables" as *;
-
+@use "../../sass/abstracts" as *;
 .project-modal {
 	border: none;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	@include m.border-rounded;
+	@include border-rounded;
 	padding: 0px;
 	height: 70%;
 	position: relative;
@@ -75,9 +73,9 @@
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
-	@include m.border-rounded;
-	background-color: $secondary30;
-	box-shadow: 6px 6px 33px 1px $background-shade-950;
+	@include border-rounded;
+	background-color: $secondary;
+	box-shadow: 6px 6px 33px 1px $background;
 }
 
 .project-skills {
@@ -101,7 +99,7 @@
 		.tooltip {
 			opacity: 0;
 			font-size: small;
-			color: white;
+			color: $text;
 
 			display: flex;
 			align-items: center;

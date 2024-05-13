@@ -28,7 +28,7 @@ export default function ContactForm() {
 			ref={form}
 			onSubmit={sendEmail}
 		>
-			<h1>Send me a message</h1>
+			<h2>Send Me a Message</h2>
 			<label>
 				Name:
 				<input

@@ -1,5 +1,4 @@
-@use "../../sass/mixins" as m;
-@use "../../sass/variables" as *;
+@use "../../sass/abstracts" as *;
 
 .course-container {
 	height: 100%;
@@ -8,7 +7,7 @@
 		// flex-direction: ;
 		align-items: center;
 		justify-content: center;
-		@include m.border-rounded;
+		@include border-rounded;
 		padding: 0px;
 
 		position: relative;
@@ -18,7 +17,7 @@
 		.course-institute {
 			height: 7em;
 			width: 10em;
-			border-right: 1px solid black;
+			border-right: 1px solid $text;
 			.institute-logo {
 				height: 7em;
 				width: 10em;

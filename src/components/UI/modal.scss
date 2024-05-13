@@ -1,5 +1,4 @@
-@use "../../sass/variables" as *;
-@use "../../sass/mixins" as m;
+@use "../../sass/abstracts" as *;
 @keyframes slide-in-from-top {
 	0% {
 		transform: translateY(-15%);
@@ -28,9 +27,9 @@
 	align-items: center;
 	padding: 0px;
 	margin: auto;
-	background-color: $secondary-shade-900;
-	color: $light-text;
-	@include m.border-rounded;
+	background-color: $secondary;
+	color: $text;
+	@include border-rounded;
 	border: none;
 
 	.close-button {
