@@ -145,6 +145,8 @@ export const COURSES = [
 		id: "course1",
 		name: "Front-End Engineer Career Path",
 		institute: "Codecademy",
+		icon: "simple-icons:codecademy",
+		completed: true,
 		year: 2024,
 		certificate:
 			"https://www.codecademy.com/profiles/ellenevdm/certificates/2682884a0719474f96407efe432fdd87",
@@ -153,9 +155,20 @@ export const COURSES = [
 		id: "course2",
 		name: "React - The Complete Guide",
 		institute: "Udemy",
+		icon: "simple-icons:udemy",
+		completed: true,
 		year: 2024,
 		certificate:
 			"https://www.udemy.com/certificate/UC-cfc64e46-8059-42a0-99c4-8773c4a12772/",
+	},
+	{
+		id: "course3",
+		name: "Vue - The Complete Guide",
+		institute: "Udemy",
+		icon: "simple-icons:udemy",
+		completed: false,
+		year: "...",
+		certificate: "",
 	},
 ];
 
@@ -192,5 +205,57 @@ export const PROJECTS = [
 		link: "https://readit-hub.netlify.app/",
 		image: "readitHub",
 		responsive: true,
+	},
+];
+
+export const SOCIALS = [
+	{
+		id: "s1",
+		platform: "email",
+		label: "Email",
+		info: "ellene.vdMeijden@gmail.com",
+		link: "mailto: ellenevdmeijden@gmail.com",
+	},
+	{
+		id: "s2",
+		platform: "whatsapp",
+		label: "Whatsapp",
+		info: "0662465655",
+		link: "https://wa.me/27662465655",
+	},
+	{
+		id: "s3",
+		platform: "linkedin",
+		label: "LinkedIn",
+		info: "www.linkedin.com/in/ellene-van-der-meijden",
+		link: "https://www.linkedin.com/in/ellene-van-der-meijden/",
+	},
+	{
+		id: "s4",
+		platform: "github",
+		label: "GitHub",
+		info: "www.github.com/ellenevdm",
+		link: "https://github.com/ellenevdm",
+	},
+];
+
+export const LISTS = [
+	{
+		id: "hobbies",
+		title: "Hobbies and Interests",
+		icon: "mdi:heart",
+		items: ["Spending Time In Nature", "My Pets", "Travelling & Exploring"],
+	},
+	{
+		id: "values",
+		title: "Personal Values",
+		icon: "mdi:compass-rose",
+		items: ["Respect", "Honesty", "Authenticity"],
+	},
+	{
+		id: "goals",
+		title: "Future Goals",
+		icon: "mdi:target-arrow",
+		items: ["Learn Vue.js", "Learn React Native", "Develop current skills"],
 	},
 ];

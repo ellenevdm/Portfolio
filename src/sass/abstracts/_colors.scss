@@ -1,18 +1,17 @@
-@use "./mixins" as m;
+@use "./functions" as *;
 
-$text: hsl(224, 94%, 93%);
-$background: hsl(227, 100%, 3%);
-$primary: hsl(225, 83%, 70%);
-$secondary: hsl(224, 88%, 29%);
-$accent: hsl(318, 100%, 58%);
+$dark-text: hsl(216, 14%, 7%);
+$text: white;
+$background: #131313;
+$primary: #6974fe;
+$secondary: #4e4e4e;
+$accent: #ff11db;
 
-//Alpha variables
-@include m.create-alpha-variables($primary, "primary");
-@include m.create-alpha-variables($secondary, "secondary");
-@include m.create-alpha-variables($accent, "accent");
+$shades: 9;
+$alpha-values: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9;
 
-//Shades
-@include m.create-shades($primary, "primary");
-@include m.create-shades($secondary, "secondary");
-@include m.create-shades($accent, "accent");
-@include m.create-shades($text, "text");
+$secondary-alpha-10: color-change-action($secondary, "alpha", 10%);
+$secondary-alpha-20: color-change-action($secondary, "alpha", 20%);
+$secondary-alpha-30: color-change-action($secondary, "alpha", 30%);
+$secondary-alpha-40: color-change-action($secondary, "alpha", 40%);
+$secondary-alpha-50: color-change-action($secondary, "alpha", 50%);

@@ -1,4 +1,4 @@
-@use "abstracts" as *;
+@import "./abstracts";
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 * {
@@ -27,6 +27,8 @@ button {
 }
 a {
 	text-decoration: none;
+	color: $accent;
+	font-weight: 600;
 }
 
 ul {
@@ -39,10 +41,8 @@ ul {
 	margin: auto;
 	width: 80%;
 	height: 100%;
-
+	padding-bottom: 5%;
 	justify-content: center;
-
-	text-align: center;
 }
 
 // <uniquifier>: Use a unique and descriptive class name
@@ -50,16 +50,32 @@ ul {
 h1 {
 	@include font($righteous, $heading-1-size);
 	text-transform: uppercase;
+	text-align: center;
 }
 
 h2 {
+	text-align: center;
 	@include font($righteous, $heading-2-size);
 }
 h3 {
-	@include font(
-		$montserrat-italic,
-		$heading-3-size,
-		$font-weight-semibold,
-		$font-italic
-	);
+	@include font($montserrat, $heading-3-size, $font-weight-semibold);
+	text-decoration: wavy;
+}
+
+.gradient-text {
+	background: linear-gradient(120deg, $primary, $accent);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.outline-text {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: $text;
+	color: transparent;
+	font-style: italic;
+}
+
+.info-text {
+	font-size: 12px;
+	font-weight: $font-weight-light;
 }

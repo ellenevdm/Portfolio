@@ -3,13 +3,12 @@ import "./contact-section.scss";
 import { useRef, useState } from "react";
 
 import Button from "../UI/Button";
+import CVDownload from "../UI/CVDownload";
 import ContactForm from "./ContactForm";
 import { Icon } from "@iconify/react";
-import { LogosGithubIcon } from "../SVGComponents/GithubIcon";
-import { LogosGoogleGmail } from "../SVGComponents/EmailIcon";
-import { LogosLinkedinIcon } from "../SVGComponents/LinkedInIcon";
-import { LogosWhatsappIcon } from "../SVGComponents/WhatsappIcon";
 import Modal from "../UI/Modal";
+import { SOCIALS } from "../../data/data";
+import SocialItem from "./SocialItem";
 
 export default function ContactModal({ isOpen, hideModal }) {
 	const [copiedState, setCopiedState] = useState({
@@ -33,7 +32,7 @@ export default function ContactModal({ isOpen, hideModal }) {
 						...prevState,
 						[contactKey]: false,
 					}));
-				}, 3000); // Revert back to copy icon after 4 seconds
+				}, 3000);
 			})
 			.catch((error) => {
 				console.error("Error copying text: ", error);
@@ -51,116 +50,29 @@ export default function ContactModal({ isOpen, hideModal }) {
 					<h1>Get in Touch</h1>
 
 					<p>
-						I hope to hear from you. Please get in touch through any of the
-						following socials:
+						Connect via socials, download my CV <CVDownload> here </CVDownload>,
+						or send a message using the contact form
 					</p>
-					<div className="contact-socials">
-						<div className="social-item">
-							<a
-								href="mailto: ellenevdmeijden@gmail.com"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="contact-icon"
-							>
-								<LogosGoogleGmail className="contact-icon-modal" />
-							</a>
-							<div className="contact-info">
-								<span className="contact-label">Email</span>{" "}
-								<span className="contact-text">ellene.vdMeijden@gmail.com</span>
-								<Button
-									className="copy-btn"
-									onClick={() =>
-										copyToClipboard("ellene.vdMeijden@gmail.com", "email")
-									}
-									icon={
-										copiedState.email
-											? "ic:baseline-check"
-											: "ic:baseline-content-copy"
-									}
-									secondary
-								/>
-							</div>
-						</div>
 
-						<div className="social-item">
-							<a
-								aria-label="Chat on WhatsApp"
-								href="https://wa.me/27662465655"
-								target="_blank"
-								className="contact-icon"
-							>
-								<LogosWhatsappIcon className="contact-icon-modal" />
-							</a>
-							<div className="contact-info">
-								<span className="contact-label">WhatsApp</span>
-								<span className="contact-text">0662465655</span>
-								<Button
-									className="copy-btn"
-									onClick={() => copyToClipboard("0662465655", "whatsapp")}
-									icon={
-										copiedState.whatsapp
-											? "ic:baseline-check"
-											: "ic:baseline-content-copy"
-									}
-									secondary
-								/>
-							</div>
-						</div>
-						<div className="social-item">
-							<a
-								href="https://www.linkedin.com/in/ellene-van-der-meijden/"
-								target="_blank"
-								className="contact-icon"
-							>
-								<LogosLinkedinIcon className="contact-icon-modal" />
-							</a>
-							<div className="contact-info">
-								<span className="contact-label">LinkedIn</span>{" "}
-								<span className="contact-text">
-									www.linkedin.com/in/ellene-van-der-meijden
-								</span>
-								<Button
-									className="copy-btn"
-									onClick={() =>
-										copyToClipboard(
-											"www.linkedin.com/in/ellene-van-der-meijden",
-											"linkedin"
-										)
-									}
-									icon={
-										copiedState.linkedin
-											? "ic:baseline-check"
-											: "ic:baseline-content-copy"
-									}
-									secondary
-								/>
-							</div>
-						</div>
-						<div className="social-item">
-							<a
-								href="https://github.com/ellenevdm"
-								target="_blank"
-								className="contact-icon"
-							>
-								<LogosGithubIcon className="contact-icon-modal" />{" "}
-							</a>
-							<div className="contact-info">
-								<span className="contact-label">GitHub</span>{" "}
-								<span className="contact-text">www.github.com/ellenevdm</span>
-								<Button
-									className="copy-btn"
-									onClick={() =>
-										copyToClipboard("www.github.com/ellenevdm", "github")
-									}
-									icon={
-										copiedState.github
-											? "ic:baseline-check"
-											: "ic:baseline-content-copy"
-									}
-								/>
-							</div>
-						</div>
+					<div className="contact-socials">
+						{SOCIALS.map((social) => (
+							<SocialItem
+								key={social.id}
+								link={social.link}
+								platform={social.platform}
+								text={social.info}
+								copied={copiedState[social.platform]}
+								label={social.label}
+								onClickCopy={() =>
+									copyToClipboard(social.info, social.platform)
+								}
+							/>
+						))}
 					</div>
+					<span className="instructions info-text">
+						* Click on the icons to directly access corresponding platforms or
+						use the copy buttons to copy relevant contact information.
+					</span>
 				</div>
 				<div className="contact-form-section">
 					<ContactForm />

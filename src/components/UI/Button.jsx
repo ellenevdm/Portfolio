@@ -2,17 +2,6 @@ import "./Button.scss";
 
 import { Icon } from "@iconify/react";
 
-// export default function Button({ children, className = "", ...props }) {
-// 	return (
-// 		<button
-// 			className={`button + ${className}`}
-// 			{...props}
-// 		>
-// 			{children}
-// 		</button>
-// 	);
-// }
-
 export default function Button({
 	icon = "",
 	text = "",

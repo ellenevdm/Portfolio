@@ -1,3 +1,17 @@
-@function adjust-alpha($color, $percentage) {
-	@return rgba(red($color), green($color), blue($color), $percentage);
+@use "sass:color";
+
+@function adjust-alpha($color, $alpha) {
+	@return rgba(red($color), green($color), blue($color), $alpha);
+}
+
+@function color-change-action($color, $action, $percentage) {
+	@if $action == "lighten" {
+		@return lighten($color, $percentage);
+	} @else if $action == "darken" {
+		@return darken($color, $percentage);
+	} @else if $action == "alpha" {
+		@return adjust-alpha($color, $percentage);
+	} @else {
+		@return $color;
+	}
 }

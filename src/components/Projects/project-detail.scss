@@ -55,27 +55,35 @@
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
-}
+	.project-info {
+		width: 30%;
 
-.project-buttons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-}
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		// justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		@include border-rounded;
+		background-color: $secondary-alpha-20;
+		box-shadow: 6px 6px 33px 1px $background;
 
-.project-info {
-	width: 40%;
+		.project-buttons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 100%;
+			.project-button {
+				margin: 12px;
+				width: 100%;
+			}
+		}
+	}
 
-	padding: 1em;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
-	@include border-rounded;
-	background-color: $secondary;
-	box-shadow: 6px 6px 33px 1px $background;
+	.website-mockup {
+		flex: 1;
+	}
 }
 
 .project-skills {
@@ -115,11 +123,6 @@
 			transition-duration: 0.3s;
 		}
 	}
-}
-
-.website-mockup {
-	flex: 1;
-	max-width: 100%;
 }
 
 @media (max-width: 768px) {

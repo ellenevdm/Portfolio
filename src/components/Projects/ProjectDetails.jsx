@@ -89,18 +89,17 @@ export default function ProjectDetails({ id, ...props }) {
 					</div>
 					<div className="project-buttons info-section">
 						<Button
-							className="open-website-modal-button"
+							className="project-button"
 							onClick={() => handleSelectProject(project)}
 							icon="ic:baseline-preview"
 							text="Preview"
-							extend
 						/>
 
 						<Button
-							className="open-website-button"
+							className="project-button"
 							onClick={() => open(project.link, "target")}
 							icon="ic:round-open-in-new"
-							text="Visit Website"
+							text="View Live Site"
 							primary
 						/>
 					</div>

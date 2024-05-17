@@ -2,22 +2,7 @@ import "./courses.scss";
 
 import Button from "../UI/Button";
 import { COURSES } from "../../data/data";
-import CodecademyLogo from "../SVGComponents/CodecademyLogo";
-import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import UdemyLogo from "../SVGComponents/UdemyLogo";
-
-function renderLogoSvg(course) {
-	switch (course.institute) {
-		case "Codecademy":
-			return <CodecademyLogo className="institute-logo" />;
-		case "Udemy":
-			return <UdemyLogo className="institute-logo" />;
-
-		default:
-			return null;
-	}
-}
 
 export default function Courses({ className = "" }) {
 	return (
@@ -27,23 +12,28 @@ export default function Courses({ className = "" }) {
 					className="course"
 					key={course.id}
 				>
-					<div className="course-institute">{renderLogoSvg(course)}</div>
-					<div className="info">
-						<span className="course-title">{course.name}</span>
+					<h4 className="course-title">{course.name}</h4>
 
-						<span className="year">{course.year}</span>
-
+					<p className="info">
+						<span className="institute-title">{course.institute} </span>
+						{course.completed && (
+							<small className="year"> || {course.year}</small>
+						)}
+					</p>
+					{course.completed ? (
 						<Link
 							to={course.certificate}
 							target="_blank"
 						>
 							<Button
 								className="certificate-button"
-								icon="ic:baseline-workspace-premium"
+								icon={course.icon}
 								text="View Certificate"
 							/>
 						</Link>
-					</div>
+					) : (
+						<div className="loader"></div>
+					)}
 				</div>
 			))}
 		</div>

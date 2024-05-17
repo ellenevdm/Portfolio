@@ -2,6 +2,7 @@ import "./contact-form.scss";
 
 import React, { useRef } from "react";
 
+import Button from "../UI/Button";
 import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
@@ -55,12 +56,12 @@ export default function ContactForm() {
 					required
 				/>
 			</label>
-			<button
+			<Button
 				className="submit"
 				type="submit"
-			>
-				Send
-			</button>
+				text="Send"
+				primary
+			/>
 		</form>
 	);
 }

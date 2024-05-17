@@ -1,7 +1,10 @@
 import "./about.scss";
 
+import CVDownload from "../components/UI/CVDownload";
 import Courses from "../components/About/Courses";
 import { Icon } from "@iconify/react";
+import PersonalSection from "../components/About/PersonalSection";
+import ProfessionalSection from "../components/About/ProfessionalSection";
 import Skills from "../components/About/Skills";
 
 export default function AboutPage() {
@@ -19,6 +22,9 @@ export default function AboutPage() {
 					every project."
 				</p>
 			</div>
+			{/* <h2>Professionally</h2>
+			<CVDownload>Click here</CVDownload> to download my CV for more information
+			regarding work experience and other qualifications.
 			<div className="about-section skills-courses">
 				<div className="section c">
 					<h3>COURSES</h3>
@@ -28,158 +34,10 @@ export default function AboutPage() {
 					<h3>SKILLS</h3>
 					<Skills className="content s" />
 				</div>
-			</div>
-			<div className="about-section personal-container">
-				<h2>Who I am</h2>
-				<p>
-					Originally from Nelspruit, I moved to Pretoria to study. I have
-					obtained a BCom in Business Management, but after starting to play
-					around with different coding languages I developed a deep passion for
-					front end development
-				</p>
-				<div className="personal-sections">
-					<div className="personal-section hobbies">
-						<h3>Interest and Hobbies</h3>
+			</div> */}
+			<ProfessionalSection />
 
-						<ul className="list__hobbies">
-							<li>
-								<Icon
-									className="list-icon"
-									icon="material-symbols:nature"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Nature
-							</li>
-							<li>
-								<Icon
-									className="list-icon"
-									icon="material-symbols:pets"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Pets
-							</li>
-							<li>
-								<Icon
-									className="list-icon"
-									icon="material-symbols:travel-explore"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Travelling
-							</li>
-							<li>
-								<Icon
-									className="list-icon"
-									icon="material-symbols:hiking"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Hiking
-							</li>
-						</ul>
-					</div>
-
-					<div className="personal-section values">
-						<h3>Personal Values</h3>
-
-						<ul className="list__values-list">
-							<li>
-								<Icon
-									className="list-icon"
-									icon="material-symbols:handshake-outline"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Respect
-							</li>
-							<li>
-								<Icon
-									className="list-icon"
-									icon="la:balance-scale"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Honesty
-							</li>
-
-							<li>
-								<Icon
-									className="list-icon"
-									icon="mdi:head-question-outline"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Curiosity
-							</li>
-							<li>
-								<Icon
-									className="list-icon"
-									icon="material-symbols:verified-user-outline"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Authenticity
-							</li>
-							<li>
-								<Icon
-									className="list-icon"
-									icon="mdi:head-lightbulb-outline"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Creativity
-							</li>
-						</ul>
-					</div>
-					<div className="personal-section goals">
-						<h3>Goals</h3>
-						<ul className="list__goals">
-							<li>
-								{" "}
-								<Icon
-									className="list-icon"
-									icon="mdi:target-arrow"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Study Vue.js Course
-							</li>
-							<li>
-								{" "}
-								<Icon
-									className="list-icon"
-									icon="mdi:target-arrow"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Study React Native Course
-							</li>
-							<li>
-								{" "}
-								<Icon
-									className="list-icon"
-									icon="mdi:target-arrow"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Develop current skills
-							</li>
-							<li>
-								{" "}
-								<Icon
-									className="list-icon"
-									icon="mdi:target-arrow"
-									width="1.5em"
-									height="1.5em"
-								/>
-								Grow as a front-end developer
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<PersonalSection />
 		</div>
 	);
 }
