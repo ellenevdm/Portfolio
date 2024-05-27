@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import "./courses.scss";
 
 import Button from "../UI/Button";
@@ -12,28 +14,27 @@ export default function Courses({ className = "" }) {
 					className="course"
 					key={course.id}
 				>
-					<h4 className="course-title">{course.name}</h4>
-
-					<p className="info">
-						<span className="institute-title">{course.institute} </span>
-						{course.completed && (
-							<small className="year"> || {course.year}</small>
+					<p className="course-title">{course.name}</p>
+					<div>
+						<div className="info">
+							<span className="institute-title">{course.institute} </span>
+							{course.completed && <span className="year">{course.year}</span>}
+						</div>
+						{course.completed ? (
+							<Link
+								to={course.certificate}
+								target="_blank"
+							>
+								<Button
+									className="certificate-button"
+									icon={course.icon}
+									text="View Certificate"
+								/>
+							</Link>
+						) : (
+							<div className="loader"></div>
 						)}
-					</p>
-					{course.completed ? (
-						<Link
-							to={course.certificate}
-							target="_blank"
-						>
-							<Button
-								className="certificate-button"
-								icon={course.icon}
-								text="View Certificate"
-							/>
-						</Link>
-					) : (
-						<div className="loader"></div>
-					)}
+					</div>
 				</div>
 			))}
 		</div>

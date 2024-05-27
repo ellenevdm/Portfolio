@@ -1,16 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import "./about.scss";
 
-import CVDownload from "../components/UI/CVDownload";
-import Courses from "../components/About/Courses";
-import { Icon } from "@iconify/react";
 import PersonalSection from "../components/About/PersonalSection";
 import ProfessionalSection from "../components/About/ProfessionalSection";
-import Skills from "../components/About/Skills";
 
 export default function AboutPage() {
 	return (
 		<div className="about-page page">
-			<div>
+			<div className="about-intro">
 				<h1>About</h1>
 				<p>
 					"Exploring the intersection of code and creativity, I'm a Front-End
@@ -22,22 +20,12 @@ export default function AboutPage() {
 					every project."
 				</p>
 			</div>
-			{/* <h2>Professionally</h2>
-			<CVDownload>Click here</CVDownload> to download my CV for more information
-			regarding work experience and other qualifications.
-			<div className="about-section skills-courses">
-				<div className="section c">
-					<h3>COURSES</h3>
-					<Courses className="content c" />
-				</div>
-				<div className="section s">
-					<h3>SKILLS</h3>
-					<Skills className="content s" />
-				</div>
-			</div> */}
-			<ProfessionalSection />
 
-			<PersonalSection />
+			<div className="about-containers">
+				<ProfessionalSection />
+
+				<PersonalSection />
+			</div>
 		</div>
 	);
 }
