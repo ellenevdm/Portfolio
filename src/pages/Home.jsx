@@ -3,8 +3,6 @@ import "./home.scss";
 import Button from "../components/UI/Button";
 import CVDownload from "../components/UI/CVDownload";
 import Hangman from "../components/Game/Hangman";
-import { Icon } from "@iconify/react";
-import pdf from "../assets/documents/CV2024.pdf";
 
 export default function HomePage() {
 	return (

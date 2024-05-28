@@ -1,4 +1,4 @@
-import pdf from "../../assets/documents/CV2024.pdf";
+import pdf from "../../assets/documents/ElleneVDMCV.pdf";
 
 export default function CVDownload({ children }) {
 	return (

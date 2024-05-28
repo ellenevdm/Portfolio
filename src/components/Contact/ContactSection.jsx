@@ -2,10 +2,8 @@ import "./contact-section.scss";
 
 import { useRef, useState } from "react";
 
-import Button from "../UI/Button";
 import CVDownload from "../UI/CVDownload";
 import ContactForm from "./ContactForm";
-import { Icon } from "@iconify/react";
 import Modal from "../UI/Modal";
 import { SOCIALS } from "../../data/data";
 import SocialItem from "./SocialItem";
@@ -43,8 +41,7 @@ export default function ContactModal({ isOpen, hideModal }) {
 		<Modal
 			open={isOpen}
 			className="contact-modal"
-			closeModal={hideModal}
-		>
+			closeModal={hideModal}>
 			<div className="contact-modal-content">
 				<div className="contact-section">
 					<h1>Get in Touch</h1>
