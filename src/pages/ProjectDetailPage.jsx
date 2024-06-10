@@ -1,14 +1,18 @@
-// import "./project-detail-page.scss";
+import "./projectDetailPage.scss";
 
-import ProjectDetails from "../components/Projects/ProjectDetails";
-import { useParams } from "react-router-dom";
+import Button from "../components-new/UI/Button";
+import ProjectDetails from "../components-new/project/ProjectDetails";
+import { useNavigate } from "react-router-dom";
 
 export default function ProjectDetailPage() {
-	const params = useParams();
-	const projId = params.projectId;
+	const navigate = useNavigate();
 	return (
-		<div className="project-detail-page page">
-			<ProjectDetails id={projId} />
-		</div>
+		<>
+			<h1>Project Detail Page</h1>
+			<Button onClick={() => navigate("/projects")}>
+				Back To Project Lists
+			</Button>
+			<ProjectDetails />
+		</>
 	);
 }

@@ -81,7 +81,7 @@ export const SKILLS = [
 	{
 		id: "html",
 		name: "HTML5",
-		icon: "html-5-icon",
+		icon: "html",
 		level: 5,
 	},
 	{
@@ -129,7 +129,7 @@ export const SKILLS = [
 	{
 		id: "router",
 		name: "REACT ROUTER",
-		icon: "react-router",
+		icon: "router",
 		level: 3,
 	},
 	{
@@ -183,7 +183,8 @@ export const PROJECTS = [
 			'Merging my passion for pets with front-end development, I created a captivating online hub for "Pawfectly Pampered," uniting aesthetics with function.',
 		technologies: ["CSS", "HTML5"],
 		link: "https://pawfectly-pampered.netlify.app/",
-		image: "pawfectlypampered",
+		imageResp: "pawResp",
+		imageMock: "pawMock",
 		responsive: true,
 	},
 	{
@@ -193,7 +194,8 @@ export const PROJECTS = [
 		description: "playlist creator for spotify",
 		technologies: ["CSS", "REACT"],
 		link: "https://evdmjammmingapp.netlify.app/",
-		image: "jammming",
+		imageMock: "jamMock",
+		imageResp: "jamMock",
 		responsive: false,
 	},
 	{
@@ -203,7 +205,8 @@ export const PROJECTS = [
 		description: "reddit clone simplified version",
 		technologies: ["BOOTSTRAP", "REACT", "REDUX"],
 		link: "https://readit-hub.netlify.app/",
-		image: "readitHub",
+		imageMock: "readMock",
+		imageResp: "readResp",
 		responsive: true,
 	},
 ];

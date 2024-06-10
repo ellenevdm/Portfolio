@@ -1,32 +1,55 @@
 // import "./App.scss";
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import AboutPage from "./pages/About";
-import HomePage from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import ContactModal from "./components-new/contact/ContactModal";
+import Footer from "./components-new/layout/Footer";
+import HomePage from "./pages/HomePage";
+import MainNavigation from "./components-new/layout/MainNavigation";
+import { ModalProvider } from "./context/ModalContext";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
-import ProjectsPage from "./pages/Projects";
-import RootLayout from "./pages/Root";
+import ProjectListPage from "./pages/ProjectListPage";
+import ProjectModal from "./components-new/project/ProjectModal";
+import { ProjectProvider } from "./context/ProjectContext";
+import { useState } from "react";
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <RootLayout />,
-		children: [
-			{ index: true, element: <HomePage /> },
-			{ path: "about", element: <AboutPage /> },
+// import RootLayout from "./pages -old/Root";
 
-			{ path: "projects", element: <ProjectsPage /> },
-
-			{ path: "projects/:projectId", element: <ProjectDetailPage /> },
-		],
-	},
-]);
 function App() {
 	return (
-		<div className="App">
-			<RouterProvider router={router} />
-		</div>
+		<ModalProvider>
+			<ProjectProvider>
+				<Router>
+					<MainNavigation />
+					<main>
+						<Routes>
+							<Route
+								exact
+								path="/"
+								element={<HomePage />}
+							/>
+							<Route
+								path="/about"
+								element={<AboutPage />}
+							/>
+							<Route
+								exact
+								path="/projects"
+								element={<ProjectListPage />}
+							/>
+							<Route
+								path="/projects/:id"
+								element={<ProjectDetailPage />}
+							/>
+						</Routes>
+					</main>
+					<Footer />
+					<ContactModal />
+					<ProjectModal />
+				</Router>
+			</ProjectProvider>
+		</ModalProvider>
 	);
 }
 
