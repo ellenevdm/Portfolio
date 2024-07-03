@@ -1,1 +1,60 @@
+@use "../../sass/abstracts" as *;
 
+.contact-form {
+  background-color: black;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 1em;
+  justify-content: space-around;
+  padding: 1rem;
+  @include border-rounded;
+  h1 {
+    text-align: center;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 14px;
+      @include font($montserrat);
+      margin-top: 5px;
+      border: none;
+      background-color: lightgray;
+      @include border-rounded;
+
+      &:focus {
+        border: 1px solid $accent;
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 100px;
+    }
+    &:focus-within {
+      color: $accent; // Change to your desired color
+      font-weight: bold;
+    }
+  }
+}
+
+@include screen("small") {
+  .contact-form {
+    width: 100%;
+
+    div {
+      display: block;
+    }
+  }
+}

@@ -7,7 +7,7 @@ import SkillList from "../components-new/about/SkillList";
 
 export default function AboutPage() {
 	return (
-		<>
+		<div className="page">
 			<h1>AboutPage</h1>
 			<p>
 				"Exploring the intersection of code and creativity, I'm a Front-End
@@ -31,6 +31,6 @@ export default function AboutPage() {
 				development
 			</p>
 			<PersonalList />
-		</>
+		</div>
 	);
 }

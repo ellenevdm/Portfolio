@@ -1,0 +1,17 @@
+@use '../../sass/abstracts' as *;
+
+.btn {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    @include border-rounded;
+
+    &-primary {
+        background-color: $primary;
+        color: white;
+    }
+    &-secondary {
+        background-color: $secondary;
+        color: black;
+    }
+}

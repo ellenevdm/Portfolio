@@ -1,10 +1,93 @@
-header {
+@import "../../sass/abstracts";
+
+.header {
 	width: 100%;
-	border: 1px solid black;
-	height: 50px;
-	nav {
+	background-color: white;
+	border-bottom: 1px solid black;
+	max-height: 80px;
+	position: fixed;
+	top: 0;
+	z-index: 2000;
+	margin: 0;
+	.nav-bar {
+		background-color: white;
+		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		width: 90%;
+
+		.logo {
+			margin-left: 10px;
+		}
+		.menu-btn {
+			display: none;
+		}
+
+		.nav-list {
+			display: flex;
+
+			justify-content: space-between;
+
+			li:not(:last-child) {
+				margin-right: 60px;
+
+				.nav-link {
+					text-decoration: none;
+					font-weight: bold;
+					color: black;
+
+					&.active {
+						color: $accent;
+					}
+					&:hover {
+						color: $accent;
+					}
+				}
+			}
+		}
+	}
+}
+@include screen("small") {
+	.header {
+		height: 50px;
+		.nav-bar {
+			width: 100%;
+			.menu-btn {
+				display: block;
+			}
+			.nav-list {
+				display: none;
+
+				.nav-link {
+					display: none;
+				}
+			}
+			.menu-mobile {
+				display: block;
+				list-style: none;
+				left: 0;
+
+				transition: all 0.5s ease-in-out;
+				width: 100%;
+				// backdrop-filter: ;
+				position: fixed;
+				backdrop-filter: blur(5px);
+				left: 0;
+				height: 100%;
+				z-index: 99;
+				top: 50px;
+				margin: 0;
+
+				.link-mobile {
+					padding: 32px;
+					width: 100%;
+					transition: all 0.5s ease-in-out;
+					text-align: center;
+					display: block !important;
+					margin: 0 0 0 0;
+				}
+			}
+		}
 	}
 }

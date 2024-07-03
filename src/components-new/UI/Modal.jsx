@@ -1,9 +1,6 @@
-import "./modal.scss";
-
 import { useEffect, useRef } from "react";
-
 import { createPortal } from "react-dom";
-
+import './modal.scss';
 export default function Modal({ closeModal, children, open, className = "" }) {
 	const dialog = useRef();
 
@@ -14,11 +11,14 @@ export default function Modal({ closeModal, children, open, className = "" }) {
 		} else {
 			modal.close();
 		}
+
 		const handleCancel = (event) => {
 			event.preventDefault();
 			closeModal();
 		};
+
 		modal.addEventListener("cancel", handleCancel);
+
 		return () => {
 			modal.removeEventListener("cancel", handleCancel);
 		};

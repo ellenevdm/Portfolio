@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./button.scss";
 
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -12,14 +13,16 @@ export default function Button({
 }) {
 	let classes = `btn ${className} `;
 	if (primary) {
-		classes += "btn-primary";
+		classes += "btn-primary ";
 	} else if (secondary) {
 		classes += "btn-secondary";
-	}
+	} 
+
+    
 
 	return (
 		<button
-			className="classes"
+			className={classes}
 			{...props}>
 			<span> {children} </span>
 			<Icon icon={icon} />

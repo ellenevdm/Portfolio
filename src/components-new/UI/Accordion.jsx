@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
 
 export default function Accordion({ sections }) {
@@ -12,9 +13,18 @@ export default function Accordion({ sections }) {
 				<div
 					className="accordion-item"
 					key={index}>
-					<button onClick={() => toggleSection(section.title)}>
-						{section.title}
-					</button>
+					<div onClick={() => toggleSection(section.title)}>
+						{section.title}{" "}
+						<span>
+							<Icon
+								icon={
+									activeSection === section.title
+										? "ic:baseline-expand-less"
+										: "ic:baseline-expand-more"
+								}
+							/>
+						</span>
+					</div>
 					{activeSection === section.title && (
 						<div className="accordion-content">{section.content}</div>
 					)}

@@ -13,7 +13,7 @@ export default function MainNavigation() {
 		setShowNavMenu(!showNavMenu);
 	};
 	let linkClasses = "nav-link ";
-	let navClasses = "nav-elements ";
+	let navClasses = "nav-list ";
 
 	if (showNavMenu) {
 		linkClasses += "link-mobile ";
@@ -26,46 +26,46 @@ export default function MainNavigation() {
 
 	return (
 		<header className="header">
-			<nav className="container">
+			<nav className="nav-bar">
 				<div className="logo">EVDM</div>
-				<Button
+				<button
 					onClick={handleShowNavMenu}
-					className="">
+					className="menu-btn">
 					<Icon icon={showNavMenu ? "ic:round-close" : "ic:round-menu"} />
-				</Button>
+				</button>
 
-				<div className={navClasses}>
-					<ul>
-						<li>
-							<NavLink
-								to="/"
-								className={getNavLinkClass}>
-								Home
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								to="/about"
-								className={getNavLinkClass}>
-								About
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								to="/projects"
-								className={getNavLinkClass}>
-								Projects
-							</NavLink>
-						</li>
-					</ul>
+				<ul
+					className={navClasses}
+					onClick={handleShowNavMenu}>
+					<li>
+						<NavLink
+							to="/"
+							className={getNavLinkClass}>
+							Home
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							to="/about"
+							className={getNavLinkClass}>
+							About
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							to="/projects"
+							className={getNavLinkClass}>
+							Projects
+						</NavLink>
+					</li>
 					<Button
+					primary
 						onClick={openContactModal}
-						className={getNavLinkClass}>
+						className={`contact-btn ${getNavLinkClass}`}>
 						Contact
 					</Button>
-				</div>
+				</ul>
 			</nav>
 		</header>
 	);
 }
-

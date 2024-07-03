@@ -1,0 +1,43 @@
+@use "../sass/abstracts" as *;
+
+.home-page {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	flex-wrap: wrap;
+	margin: auto;
+	.home-compnt {
+		padding: 20px;
+		margin: 30px 0px;
+		@include border-rounded;
+	}
+	.intro {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 500px;
+		h1 {
+			font-size: $display-font-size;
+			word-spacing: 10px;
+			text-transform: uppercase;
+			.gradient {
+				background: linear-gradient(120deg, $primary, $accent);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.outline {
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: black;
+				color: transparent;
+				font-style: italic;
+			}
+		}
+	}
+
+	.hangman {
+		background-color: $secondary-alpha-50;
+	}
+}

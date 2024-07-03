@@ -15,6 +15,7 @@ export default function CourseItem({ course }) {
 			{completed && (
 				<Button
 					icon={icon}
+					secondary
 					onClick={() =>
 						window.open(certificate, "_blank", "noopener noreferrer")
 					}>

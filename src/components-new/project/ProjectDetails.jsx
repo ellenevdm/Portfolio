@@ -19,11 +19,14 @@ export default function ProjectDetails() {
 			<h1>{project.name}</h1>
 			<Accordion sections={sections} />
 			<Button
+			 primary
 				icon="icon-park-outline:preview-open"
 				onClick={() => openProjectModal(project)}>
 				Open Preview
+
 			</Button>
 			<Button
+			secondary
 				icon="ic:round-open-in-new"
 				onClick={() =>
 					window.open(project.link, "_blank", "noopener noreferrer")
@@ -31,6 +34,7 @@ export default function ProjectDetails() {
 				Visit Live Site
 			</Button>
 			<Button
+			secondary
 				icon="simple-icons:github"
 				onClick={() =>
 					window.open(project.link, "_blank", "noopener noreferrer")

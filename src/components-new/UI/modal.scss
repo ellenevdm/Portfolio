@@ -1,0 +1,64 @@
+@use "../../sass/abstracts" as *;
+
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal {
+  position: relative; // Use relative positioning to let the dialog handle positioning
+  width: 70%; // Define width
+  max-width: 90%; // Ensure it doesn't exceed viewport width
+  height: auto;
+  max-height: 80%; // Ensure it doesn't exceed viewport height
+  padding: 1rem;
+  margin: auto;
+  background-color: $secondary;
+  color: $text;
+  @include border-rounded;
+  border: none;
+  overflow: auto; // Allow scrolling for content that exceeds modal size
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); // Optional shadow for visual effect
+
+  &[open] {
+    animation: slide-in-from-top 0.35s ease-out;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: $text;
+    cursor: pointer;
+  }
+}
+
+@include screen("small") {
+  .modal {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+    max-height: 80%;
+    padding: 1rem;
+    margin: auto;
+    background-color: $secondary;
+    color: $text;
+    @include border-rounded;
+    border: none;
+    overflow: auto; // Allow scrolling for content that exceeds modal size
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); // Optional shadow for visual effect
+  }
+}
