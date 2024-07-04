@@ -47,10 +47,11 @@
 
 @include screen("small") {
   .contact-item {
-    max-width: 8em;
-
+    max-width: 7em;
+    padding-right: 0;
     justify-content: center;
     align-items: center;
+    margin: 0px;
     .copy-info {
       display: flex;
       justify-content: center;

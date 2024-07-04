@@ -18,127 +18,97 @@ import readMock from "../assets/Images/readMock.png";
 import readResp from "../assets/Images/readResp.png";
 
 export function renderMockup(image) {
-	switch (image) {
-		case "jamMock":
-			return (
-				<img
-					src={jamMock}
-					alt="jam"
-				/>
-			);
-		case "pawMock":
-			return (
-				<img
-					src={pawMock}
-					alt="paw"
-				/>
-			);
-		case "readMock":
-			return (
-				<img
-					src={readMock}
-					alt="read"
-				/>
-			);
-		case "pawResp":
-			return (
-				<img
-					src={pawResp}
-					alt="paw"
-				/>
-			);
-		case "readResp":
-			return (
-				<img
-					src={readResp}
-					alt="read"
-				/>
-			);
-		default:
-			return null;
-	}
+  switch (image) {
+    case "jamMock":
+      return <img src={jamMock} alt="jam" />;
+    case "pawMock":
+      return <img src={pawMock} alt="paw" />;
+    case "readMock":
+      return <img src={readMock} alt="read" />;
+    case "pawResp":
+      return <img src={pawResp} alt="paw" />;
+    case "readResp":
+      return <img src={readResp} alt="read" />;
+    default:
+      return null;
+  }
 }
-export function renderSkillLogo(icon, ...props) {
-	switch (icon) {
-		case "bootstrap":
-			return <LogosBootstrap {...props} />;
-		case "css":
-			return <LogosCss3 {...props} />;
-		case "github":
-			return <LogosGithubIcon {...props} />;
-		case "git":
-			return <LogosGitIcon {...props} />;
-		case "html":
-			return <LogosHtml5 {...props} />;
-		case "javascript":
-			return <LogosJavascript {...props} />;
-		case "react":
-			return <LogosReact {...props} />;
-		case "redux":
-			return <LogosRedux {...props} />;
-		case "router":
-			return <LogosReactRouter {...props} />;
-		case "sass":
-			return <LogosSass {...props} />;
-		default:
-			return null;
-	}
+export function renderSkillLogo(icon, className) {
+  switch (icon) {
+    case "bootstrap":
+      return <LogosBootstrap className={className} />;
+    case "css":
+      return <LogosCss3 className={className} />;
+    case "github":
+      return <LogosGithubIcon className={className} />;
+    case "git":
+      return <LogosGitIcon className={className} />;
+    case "html":
+      return <LogosHtml5 className={className} />;
+    case "javascript":
+      return <LogosJavascript className={className} />;
+    case "react":
+      return <LogosReact className={className} />;
+    case "redux":
+      return <LogosRedux className={className} />;
+    case "router":
+      return <LogosReactRouter className={className} />;
+    case "sass":
+      return <LogosSass className={className} />;
+    default:
+      return null;
+  }
 }
 
 export function renderSocialLogo(platform, ...props) {
-	switch (platform) {
-		case "email":
-			return <LogosGoogleGmail {...props} />;
-		case "whatsapp":
-			return <LogosWhatsappIcon {...props} />;
-		case "github":
-			return <LogosGithubIcon {...props} />;
-		case "linkedin":
-			return <LogosLinkedinIcon {...props} />;
+  switch (platform) {
+    case "email":
+      return <LogosGoogleGmail {...props} />;
+    case "whatsapp":
+      return <LogosWhatsappIcon {...props} />;
+    case "github":
+      return <LogosGithubIcon {...props} />;
+    case "linkedin":
+      return <LogosLinkedinIcon {...props} />;
 
-		default:
-			return null;
-	}
+    default:
+      return null;
+  }
 }
 
 export function createProjectSections(project) {
-	return [
-		{
-			title: "Description",
-			content: <p>{project.description}</p>,
-		},
-		{
-			title: "Features",
-			content: (
-				<ul>
-					{project.features.map((feature, index) => (
-						<li key={index}>{feature}</li>
-					))}
-				</ul>
-			),
-		},
-		{
-			title: "Technologies",
-			content: (
-				<ul>
-					{project.technologies.map((tech, index) => (
-						<li key={index}>{tech}</li>
-					))}
-				</ul>
-			),
-		},
-	];
+  return [
+    {
+      title: "Description",
+      content: <p>{project.description}</p>,
+    },
+    {
+      title: "Features",
+      content: (
+        <ul>
+          {project.features.map((feature, index) => (
+            <li key={index}>{feature}</li>
+          ))}
+        </ul>
+      ),
+    },
+    {
+      title: "Technologies",
+      content: (
+        <ul>
+          {project.technologies.map((tech, index) => (
+            <li key={index}>{tech}</li>
+          ))}
+        </ul>
+      ),
+    },
+  ];
 }
 
 export function createPersonalLists(lists) {
-	return lists.map((list) => ({
-		title: list.title,
-		content: (
-			<ul>
-				{list.items.map((item, index) => (
-					<li key={index}>{item}</li>
-				))}
-			</ul>
-		),
-	}));
+  return lists.map((list) => ({
+    title: list.title,
+    content: list.items,
+    icon: list.icon,
+  }));
 }

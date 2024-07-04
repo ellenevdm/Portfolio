@@ -1,0 +1,38 @@
+@use "../../sass/abstracts" as *;
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border: 1px solid black;
+    max-width: 450px;
+    @include border-rounded;
+    h2 {
+      text-decoration: none;
+      color: black;
+    }
+    .list-mockup {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      img {
+        margin-top: 0px;
+        padding: 0;
+        width: 100%;
+      }
+    }
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+}

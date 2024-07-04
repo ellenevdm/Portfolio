@@ -1,0 +1,64 @@
+// personalSection.scss
+@use "../../sass/abstracts" as *;
+.personal-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  p {
+    width: 40%;
+  }
+  .accordion {
+    padding: 0px;
+    width: 500px;
+    border: 1px solid $secondary;
+    .accordion-item {
+      .accordion-title {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+
+        span {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .accordion-content {
+        padding: 1rem;
+        border-top: none;
+        border: 1px solid #ddd;
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+
+            .item-icon {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include screen("small") {
+  .personal-section {
+    width: 100%;
+    p {
+      width: 100%;
+    }
+    .accordion {
+      width: 90%;
+    }
+  }
+}
