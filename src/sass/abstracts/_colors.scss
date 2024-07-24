@@ -1,17 +1,71 @@
 @use "./functions" as *;
 
 $dark-text: hsl(216, 14%, 7%);
-$text: white;
-$background: #131313;
-$primary: #6974fe;
-$secondary: #4e4e4e;
-$accent: #ff11db;
-
+$text: #110736;
+$background: #ededee;
+$primary: #4f23fa;
+$secondary: #909090;
+$accent: #b623eb;
+// Primary-100: #00539b;
+// Primary-200: #006ece;
+// Primary-300: #0289ff;
+// Accent-100: #48a2d9;
+// Accent-200: #48a2d9;
+// Accent-300: #48a2d9;
+// Background-100: #f9fbfc;
+// Background-200: #e8f0f4;
+// Background-300: #d7e4eb;
+// Text-100: #00101f;
+// Text-200: #002a52;
+// Text-300: #004585;
 $shades: 9;
 $alpha-values: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9;
+
+$primary-alpha-10: color-change-action($primary, "alpha", 10%);
+$primary-alpha-20: color-change-action($primary, "alpha", 20%);
+$primary-alpha-30: color-change-action($primary, "alpha", 30%);
+$primary-alpha-40: color-change-action($primary, "alpha", 40%);
+$primary-alpha-50: color-change-action($primary, "alpha", 50%);
+$primary-alpha-60: color-change-action($primary, "alpha", 60%);
+$primary-alpha-70: color-change-action($primary, "alpha", 70%);
+$primary-alpha-80: color-change-action($primary, "alpha", 80%);
+$primary-alpha-90: color-change-action($primary, "alpha", 90%);
 
 $secondary-alpha-10: color-change-action($secondary, "alpha", 10%);
 $secondary-alpha-20: color-change-action($secondary, "alpha", 20%);
 $secondary-alpha-30: color-change-action($secondary, "alpha", 30%);
 $secondary-alpha-40: color-change-action($secondary, "alpha", 40%);
 $secondary-alpha-50: color-change-action($secondary, "alpha", 50%);
+$secondary-alpha-60: color-change-action($secondary, "alpha", 60%);
+$secondary-alpha-70: color-change-action($secondary, "alpha", 70%);
+$secondary-alpha-80: color-change-action($secondary, "alpha", 80%);
+$secondary-alpha-90: color-change-action($secondary, "alpha", 90%);
+
+$primary-lighten: color-change-action($primary, "lighten", 20%);
+$primary-darken: color-change-action($primary, "darken", 20%);
+$primary-lighter: color-change-action($primary, "lighten", 30%);
+$primary-darker: color-change-action($primary, "darken", 30%);
+$primary-light: color-change-action($primary, "lighten", 50%);
+$primary-dark: color-change-action($primary, "darken", 50%);
+$secondary-lighten: color-change-action($secondary, "lighten", 20%);
+$secondary-darken: color-change-action($secondary, "darken", 20%);
+$secondary-lighter: color-change-action($secondary, "lighten", 30%);
+$secondary-darker: color-change-action($secondary, "darken", 30%);
+$secondary-light: color-change-action($secondary, "lighten", 50%);
+$secondary-dark: color-change-action($secondary, "darken", 50%);
+
+$background-lighten: color-change-action($background, "lighten", 20%);
+$background-darken: color-change-action($background, "darken", 10%);
+$background-lighter: color-change-action($background, "lighten", 30%);
+$background-darker: color-change-action($background, "darken", 20%);
+$background-light: color-change-action($background, "lighten", 50%);
+$background-dark: color-change-action($background, "darken", 50%);
+$background-alpha-10: color-change-action($background, "alpha", 10%);
+$background-alpha-20: color-change-action($background, "alpha", 20%);
+$background-alpha-30: color-change-action($background, "alpha", 30%);
+$background-alpha-40: color-change-action($background, "alpha", 40%);
+$background-alpha-50: color-change-action($background, "alpha", 50%);
+$background-alpha-60: color-change-action($background, "alpha", 60%);
+$background-alpha-70: color-change-action($background, "alpha", 70%);
+$background-alpha-80: color-change-action($background, "alpha", 80%);
+$background-alpha-90: color-change-action($background, "alpha", 90%);

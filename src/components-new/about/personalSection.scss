@@ -1,0 +1,20 @@
+// personalSection.scss
+@use "../../sass/abstracts" as *;
+.personal-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+@include screen("small") {
+  .personal-section {
+    width: 100%;
+    p {
+      width: 100%;
+    }
+    .accordion {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@use "../../sass/abstracts" as *;
+
+.btn {
+  cursor: pointer;
+  // Padding inside button
+  border: none;
+  @include border-rounded;
+
+  padding: 0.75em;
+
+  &-primary {
+    background-color: $primary;
+    color: white;
+    padding: 0.75em 2em;
+    &:hover {
+      background-color: $primary-darken;
+    }
+  }
+  &-secondary {
+    background-color: $secondary;
+    padding: 0.75em 2em;
+    color: white;
+    &:hover {
+      background-color: $secondary-darken;
+    }
+  }
+  &:hover {
+    transform: translate(0px, -2px);
+    transition: transform ease 0.2s;
+  }
+}

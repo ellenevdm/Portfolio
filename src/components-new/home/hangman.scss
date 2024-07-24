@@ -1,0 +1,149 @@
+@use "../../sass/abstracts" as *;
+.hangman {
+  flex: 1;
+  @include box-shadow;
+  background-color: $background-darken;
+  h2 {
+    text-align: center;
+  }
+  .game {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .figure {
+      fill: transparent;
+      stroke: $text;
+      stroke-width: 4px;
+      stroke-linecap: round;
+    }
+    .game-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .word {
+        letter-spacing: 8px;
+        font-size: 1.5em;
+        text-align: center;
+      }
+      h4 {
+      }
+      span {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      ul {
+        display: flex;
+
+        li {
+          //   color: red;
+          font-size: 1.2em;
+          font-weight: semi-bold;
+          margin: 10px;
+          text-decoration: line-through;
+          text-decoration-style: solid;
+          text-decoration-thickness: 2px;
+          text-decoration-color: red;
+        }
+      }
+    }
+  }
+  .alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .letter {
+      color: $accent;
+
+      font-weight: 600;
+      padding: 0.5em;
+      margin: 0.25em;
+      border: none;
+      border-left: 1px solid $background;
+      border-bottom: 1px solid $background;
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+      background-color: $background-darken;
+      @include border-rounded;
+      &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+      @media screen {
+      }
+    }
+  }
+
+  .game-over {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // min-width: 15rem;
+    // border: 1px solid black;
+    -webkit-box-shadow: 0 0 13.5px 1px #757474;
+    -moz-box-shadow: 0 0 13.5px 1px #757474;
+    box-shadow: 0 0 13.5px 1px #757474;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: white;
+    @include border-rounded;
+    &.won {
+      background-image: linear-gradient(
+        135deg,
+        #008020 25%,
+        #006915 25%,
+        #006915 50%,
+        #008020 50%,
+        #008020 75%,
+        #006915 75%,
+        #006915 100%
+      );
+      background-size: 20px 20px;
+    }
+    &.lost {
+      background-image: linear-gradient(
+        135deg,
+        #d10000 25%,
+        #ba0000 25%,
+        #ba0000 50%,
+        #d10000 50%,
+        #d10000 75%,
+        #ba0000 75%,
+        #ba0000 100%
+      );
+      background-size: 20px 20px;
+    }
+
+    text-transform: uppercase;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .result-header {
+      font-size: 1.5em;
+      font-weight: 800;
+      margin-bottom: 0px;
+      letter-spacing: 2px;
+    }
+    .result-text {
+      font-weight: 500;
+    }
+    .result-word {
+      font-weight: 800;
+      font-size: 1.5em;
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+    }
+
+    .new-game {
+      width: 100%;
+    }
+  }
+}

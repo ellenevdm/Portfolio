@@ -1,0 +1,35 @@
+@use "../../sass/abstracts" as *;
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+
+    justify-content: flex-start;
+  }
+  .info {
+    font-size: 12px;
+    // font-weight: $font-weight-light;
+    margin-top: 30px;
+    width: 90%;
+  }
+}
+
+@include screen("small") {
+  .contact-details {
+    width: 100%;
+    .contact-items {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
