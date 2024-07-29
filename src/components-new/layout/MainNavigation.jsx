@@ -34,7 +34,7 @@ export default function MainNavigation() {
           </NavLink>
           <span className="name">llené van der Meijden</span>
         </span>
-        <span className="portfolio">PORTFOLIO</span>
+        <span className="portfolio gradient">PORTFOLIO</span>
         <button onClick={handleShowNavMenu} className="menu-btn">
           <Icon icon={showNavMenu ? "ic:round-close" : "ic:round-menu"} />
         </button>

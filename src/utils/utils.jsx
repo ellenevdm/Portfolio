@@ -111,10 +111,12 @@ export function createPersonalLists(lists) {
     key: list.key,
     title: list.title,
     content: list.content.map((item, index) => (
-      <li key={index} style={{ listStyle: "none" }}>
-        <Icon icon={list.icon} />
-        {item}
-      </li>
+      <div key={index} style={{ listStyle: "none" }} className="personal-item">
+        <span className="list-icon">
+          <Icon icon={list.icon} />
+        </span>
+        <span className="list-text">{item}</span>
+      </div>
     )),
     icon: list.icon,
   }));

@@ -1,21 +1,24 @@
 @use "../sass/abstracts" as *;
 .circle {
   border-radius: 50%;
-  background-color: $primary-alpha-20;
+  background-color: $background;
   height: calc(100vw);
   position: fixed;
-  z-index: -1;
+  z-index: 1;
   width: 100vw;
   top: 50%;
   transform: translateY(-50%);
+
   @include screen("small") {
     display: none;
   }
 }
 .about-page {
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   overflow-y: scroll;
   height: calc(100vh - 50px);
+  background-color: $primary-alpha-30;
   h1 {
     font-size: $display-font-size;
     word-spacing: 10px;
@@ -28,7 +31,7 @@
   #section1 {
     .section1-content {
       text-align: left;
-      width: 80%;
+      width: 75%;
       // color: white;
       align-self: flex-start;
       h1 {
@@ -52,7 +55,7 @@
 
   #section3 {
     .section3-content {
-      width: 80%;
+      width: 75%;
       align-self: flex-end;
 
       // flex-wrap: wrap;
@@ -77,6 +80,7 @@
     min-height: 100%;
     scroll-snap-align: start;
     scroll-margin-top: 0px;
+    z-index: 2;
 
     max-width: 1400px;
     padding: 30px;
@@ -116,13 +120,8 @@
   }
 
   @include screen("small") {
-    .circle {
-      width: 20%;
-      height: 20%;
-      left: 0px;
-      background-color: blue;
-      top: 0px;
-    }
+    background-color: $background;
+
     h1 {
       font-size: $heading-1-size;
     }
@@ -153,12 +152,12 @@
         width: 100%;
         text-align: center;
         margin-right: auto;
+        h2 {
+          text-align: center;
+        }
         section {
           flex-direction: column;
           align-items: center;
-          h2 {
-            text-align: center;
-          }
           p {
             text-align: center;
           }

@@ -17,16 +17,19 @@ export default function HomePage() {
           <div className="intro-section">
             {" "}
             <p>
-              My name is Ellené van der Meijden, an aspiring front-end developer
-              eager to learn and grow. My passion lies in creating user-friendly
-              and interactive interfaces, utilizing tools and technologies like
-              React.js, Redux, React-Router, CSS and Sass. I am always excited
+              Hi there! My name is Ellené van der Meijden, I am starting out my
+              journey as a front-end developer. I have a great passion for
+              creating user-friendly interactive interfaces, using tools and
+              technologies such as React, Redux, React Router, Sass and CSS,
+              with my main front-end framework being React. I am always excited
               to expand this list of skills through learning and studying more.
-              Feel free to download a copy of my CV below and get in touch.
+              Download a copy of my CV below or play the game of hangman (hint:
+              it’s all to do with front-end). Otherwise, continue to explore my
+              portfolio, and feel free to get in touch.
             </p>
             <CVDownload>
               <Button primary className="download-btn">
-                Download My CV
+                Download CV
               </Button>
             </CVDownload>
           </div>

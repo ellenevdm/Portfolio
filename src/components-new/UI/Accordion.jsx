@@ -34,11 +34,11 @@ const AccordionItem = ({ i, item, expanded, setExpanded }) => {
           color: isOpen ? "#fff" : "#000",
         }}
         onClick={() => setExpanded(isOpen ? null : i)}
-        className="accordion-header"
+        className={isOpen ? "accordion-header open" : "accordion-header"}
       >
         {" "}
         {item.title}
-        <Icon icon="ic:round-expand-more" />
+        <Icon icon="ic:round-expand-more" className="accordion-icon" />
       </motion.header>
       <AnimatePresence initial={false}>
         {isOpen && (

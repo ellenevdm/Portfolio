@@ -56,11 +56,18 @@ export const ProjectProvider = ({ children }) => {
           content: (
             <ul className="proj-tech">
               <li>
-                <Icon icon="simple-icons:css3" /> <span>CSS</span>
+                <span className="tech-tooltip css">CSS</span>
+                <span className="tech-icon css">
+                  {" "}
+                  <Icon icon="bxl:css3" />
+                </span>
               </li>
               <li>
                 {" "}
-                <Icon icon="simple-icons:html5" /> <span>HTML5</span>
+                <span className="tech-tooltip html">HTML</span>
+                <span className="tech-icon html">
+                  <Icon icon="bxl:html5" />
+                </span>{" "}
               </li>
             </ul>
           ),
@@ -84,12 +91,12 @@ export const ProjectProvider = ({ children }) => {
           title: "Description",
           content: (
             <p>
-              I successfully built a React web application called Jammming. The
-              application leverages the Spotify API to offer users the ability
-              to search the Spotify library, create custom playlists, and save
-              these playlists directly to their Spotify account. This project
-              involved developing various React components, managing state, and
-              handling API requests.
+              Jammming is a React web application I developed that uses the
+              Spotify API to offer users the ability to search the Spotify
+              library, create custom playlists, and save these playlists
+              directly to their Spotify account. This project involved
+              developing various React components, managing state, and handling
+              API requests.
             </p>
           ),
         },
@@ -103,21 +110,19 @@ export const ProjectProvider = ({ children }) => {
                 <strong>Spotify Library Search:</strong> Users can search for
                 songs, artists, or albums using the Spotify API.
               </li>
+
               <li>
-                <strong>Custom Playlist Creation: </strong> Users can add their
-                selected songs to a custom playlist.
-              </li>
-              <li>
-                <strong>Playlist Management:</strong> Users can name their
-                playlists and remove songs from them.
+                <strong>Playlist Management:</strong> Users can create custom
+                playlists, name them, and add and remove songs from them.
               </li>
               <li>
                 <strong>Spotify Integration:</strong> Users can save their
                 custom playlists to their Spotify account with a single click.
               </li>
               <li>
-                <strong>Drag and Drop:</strong>Users can easily rearrange songs
-                within their custom playlist using a drag-and-drop interface.
+                <strong>Drag and Drop:</strong> Users can add and remove songs
+                to and from the playlist as well as easily rearrange songs
+                within the custom playlist using a drag-and-drop interface.
               </li>
             </ul>
           ),
@@ -130,15 +135,23 @@ export const ProjectProvider = ({ children }) => {
             <ul className="proj-tech">
               <li>
                 {" "}
-                <Icon icon="simple-icons:css3" /> <span>CSS</span>
+                <span className="tech-tooltip css">CSS</span>
+                <span className="tech-icon css">
+                  {" "}
+                  <Icon icon="bxl:css3" />
+                </span>{" "}
               </li>
               <li>
-                <Icon icon="simple-icons:react" />
-                <span>REACT</span>
+                <span className="tech-tooltip react">React</span>
+                <span className="tech-icon react">
+                  <Icon icon="bxl:react" />
+                </span>
               </li>
               <li>
-                <Icon icon="simple-icons:spotify" />
-                <span>Spotify API</span>
+                <span className="tech-tooltip spotify">Spotify API</span>
+                <span className="tech-icon spotify">
+                  <Icon icon="bxl:spotify" />
+                </span>
               </li>
             </ul>
           ),
@@ -208,20 +221,29 @@ export const ProjectProvider = ({ children }) => {
           content: (
             <ul className="proj-tech">
               <li>
-                <Icon icon="simple-icons:bootstrap" />
-                <span>BOOTSTRAP</span>
+                <span className="tech-tooltip bootstrap">Bootstrap</span>
+                <span className="tech-icon bootstrap">
+                  <Icon icon="bxl:bootstrap" />
+                </span>
               </li>
               <li>
-                <Icon icon="simple-icons:react" />
-                <span>REACT</span>
+                <span className="tech-tooltip react">React</span>
+                <span className="tech-icon react">
+                  <Icon icon="bxl:react" />
+                </span>
               </li>
               <li>
-                <Icon icon="simple-icons:reddit" />
-                <span>Reddit API </span>
+                <span className="tech-tooltip redux">Redux</span>
+                <span className="tech-icon redux">
+                  <Icon icon="bxl:redux" />
+                </span>
               </li>
               <li>
-                <Icon icon="simple-icons:redux" />
-                <span>REDUX</span>
+                <span className="tech-tooltip reddit">Reddit API </span>
+                <span className="tech-icon reddit">
+                  {" "}
+                  <Icon icon="bxl:reddit" />
+                </span>
               </li>
             </ul>
           ),

@@ -1,8 +1,8 @@
 @use "../../sass/abstracts" as *;
 .hangman {
   flex: 1;
-  @include box-shadow;
-  background-color: $background-darken;
+  // @include box-shadow;
+  background-color: $background;
   h2 {
     text-align: center;
   }
@@ -56,7 +56,7 @@
     justify-content: center;
     align-items: center;
     .letter {
-      color: $accent;
+      color: $text;
 
       font-weight: 600;
       padding: 0.5em;
@@ -67,14 +67,13 @@
       width: 2rem;
       height: 2rem;
       text-align: center;
-      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
-      background-color: $background-darken;
+      @include box-shadow;
+      background-color: $background-lighten;
       @include border-rounded;
       &:disabled {
         opacity: 0.3;
         cursor: not-allowed;
-      }
-      @media screen {
+        box-shadow: none;
       }
     }
   }
@@ -143,7 +142,14 @@
     }
 
     .new-game {
-      width: 100%;
+      width: 80%;
+      font-weight: 800;
+      // @include box-shadow;
+      background-color: $secondary;
+      text-transform: uppercase;
+      border: 1px solid black;
+      // color: white;
+      letter-spacing: 1px;
     }
   }
 }

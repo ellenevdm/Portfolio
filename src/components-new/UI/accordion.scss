@@ -13,9 +13,21 @@
     font-weight: 700;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     @include box-shadow;
+
+    .accordion-icon {
+      font-size: 20px;
+      transform: translate(0px, 0px);
+      transition: transform 500ms linear;
+    }
     &:hover {
       cursor: pointer;
+    }
+    &.open {
+      .accordion-icon {
+        transform: rotate(180deg) translate(0px, 0px);
+      }
     }
   }
   .accordion-content {
@@ -25,31 +37,140 @@
 
     .proj-tech {
       display: flex;
-      gap: 2em;
+      gap: 1em;
       max-width: 300px;
-      height: 50px;
+      margin-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+
       li {
         display: flex;
-        // flex-direction: column;
+        flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        justify-content: center;
         position: relative;
-        font-size: 40px;
+        text-align: center;
 
-        span {
-          // position: absolute;
-          text-transform: lowercase;
-          display: none;
-          font-size: 15px;
-          top: 50px;
+        .tech-icon {
+          display: flex;
+          padding: 3px;
+          margin: 0 10px;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          font-size: 35px;
+          @include border-rounded;
+          color: white;
+          background-color: $secondary-alpha-20;
+          transition: all 0.3s linear 0s;
+          // word-wrap: none;
+
+          &.css {
+            color: #264de4;
+          }
+          &.html {
+            color: #f4470b;
+          }
+          &.react {
+            color: #087ea4;
+          }
+          &.spotify {
+            color: #1ed760;
+          }
+          &.bootstrap {
+            color: #8411f4;
+          }
+          &.redux {
+            color: #7248b6;
+          }
+          &.reddit {
+            color: #f74300;
+          }
+        }
+        .tech-tooltip {
+          // display: none;
+          position: absolute;
+          top: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+          color: white;
+          padding: 6px 10px;
+          border-radius: 15px;
+          opacity: 0;
+          visibility: hidden;
+          font-size: 14px;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+          &.css {
+            background-color: #264de4;
+          }
+          &.html {
+            background-color: #f4470b;
+          }
+          &.react {
+            background-color: #087ea4;
+          }
+          &.spotify {
+            background-color: #19d962;
+          }
+          &.bootstrap {
+            background-color: #8411f4;
+          }
+          &.redux {
+            background-color: #7248b6;
+          }
+          &.reddit {
+            background-color: #f74300;
+          }
         }
 
         &:hover {
-          font-size: 20px;
-          span {
-            display: block;
+          .tech-icon {
+            box-shadow: 3px 2px 35px 0px rgb(0 0 0 / 50%);
+            color: white;
+            background-color: $secondary-alpha-20;
+            &.css {
+              background-color: #264de4;
+            }
+            &.html {
+              background-color: #f4470b;
+            }
+            &.react {
+              background-color: #087ea4;
+            }
+            &.spotify {
+              background-color: #19d962;
+            }
+            &.bootstrap {
+              background-color: #8411f4;
+            }
+            &.redux {
+              background-color: #7248b6;
+            }
+            &.reddit {
+              background-color: #f74300;
+            }
+          }
+          .tech-tooltip {
+            // display: block;
+            opacity: 1;
+            visibility: visible;
+            top: 55px;
           }
         }
+      }
+    }
+    .personal-item {
+      display: flex;
+      gap: 1em;
+      margin-bottom: 10px;
+      justify-content: flex-start;
+      align-items: center;
+      .list-icon {
+        color: $primary;
+        font-size: 1.1em;
       }
     }
     ul {
