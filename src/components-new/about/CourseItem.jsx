@@ -15,7 +15,7 @@ export default function CourseItem({ course }) {
       <div className="card-body">
         <span className="institute">{institute}</span>
         <span className="year">{completed ? year : "In Progress"}</span>
-        {completed && (
+        {certificate && (
           <Button
             className="certificate-button"
             onClick={() =>

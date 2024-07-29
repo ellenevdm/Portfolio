@@ -6,7 +6,7 @@ import CourseItem from "./CourseItem";
 export default function CourseList() {
   return (
     <div className="courses">
-      <h3>Courses</h3>
+      <h3>Education</h3>
       <div className="course-list">
         {" "}
         {COURSES.map((course) => (

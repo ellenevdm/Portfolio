@@ -18,14 +18,10 @@ export default function HomePage() {
             {" "}
             <p>
               Hi there! My name is Ellené van der Meijden, I am starting out my
-              journey as a front-end developer. I have a great passion for
-              creating user-friendly interactive interfaces, using tools and
-              technologies such as React, Redux, React Router, Sass and CSS,
-              with my main front-end framework being React. I am always excited
-              to expand this list of skills through learning and studying more.
-              Download a copy of my CV below or play the game of hangman (hint:
-              it’s all to do with front-end). Otherwise, continue to explore my
-              portfolio, and feel free to get in touch.
+              journey as a front-end developer, with my main framework being
+              React. Download a copy of my CV below or play the game of hangman
+              (hint: it’s all to do with front-end). Otherwise, continue to
+              explore my portfolio, and feel free to get in touch.
             </p>
             <CVDownload>
               <Button primary className="download-btn">

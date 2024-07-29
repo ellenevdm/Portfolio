@@ -34,7 +34,21 @@ export default function AboutPage() {
           <div className="section1-content">
             {" "}
             <h1 className="page-header">About Me</h1>
-            <p>NEED TO REWRITE</p>
+            <p>
+              I grew up in Nelspruit, Mpumalanga, and graduated from Hoërskool
+              Bergvlam in 2016. In 2017, during my gap year, I completed a
+              feature writing course. I then pursued a BCom Degree in Business
+              Management, graduating cum laude in 2020. I entered the business
+              world as a data administrator but felt creatively unfulfilled. In
+              my free time, I explored free trial coding courses on Codecademy.
+              After completing an HTML and CSS intro-course, I developed a
+              strong interest in front-end and started seeing websites in a new
+              light. I decided to take a year off to focus on a full Front-end
+              Engineer course, which I completed during that year, during which
+              my passion grew as I continued learning JavaScript and React. My
+              knowledge is still expanding as I still intend to explore more
+              front-end technologies and frameworks.
+            </p>
           </div>
           <a
             onClick={() => onNavigateClick("section2")}
@@ -67,7 +81,18 @@ export default function AboutPage() {
             <section>
               {" "}
               <span>
-                <h2>Personally</h2> <p> NEED TO COMPLETE</p>
+                <h2>Personally</h2>{" "}
+                <p>
+                  {" "}
+                  Growing up in an Afrikaans household and attending English
+                  schools has made me fully bilingual in both languages,
+                  enriching my communication skills. Currently, English is the
+                  main language in our home which I share with my husband and
+                  our three adorable fur-babies—Tabs and Grey, our two cats, and
+                  Luna, our black Pomeranian. I approach life with curiosity,
+                  honesty, and a good sense of humor, which ensures my life to
+                  never be boring but also sincere.
+                </p>
               </span>
               <PersonalSection />
             </section>

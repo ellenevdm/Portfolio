@@ -17,9 +17,12 @@ export const ProjectProvider = ({ children }) => {
           title: "Description",
           content: (
             <p>
-              Merging my passion for pets with front-end development, I created
-              a captivating online hub for 'Pawfectly Pampered,' uniting
-              aesthetics with function.
+              Pawfectly Pampered was the first website I created from scratch as
+              a project for my course. It is built using only HTML and CSS. I
+              enjoyed building this website as I explored more CSS features and
+              experimented with them. The idea of the project was to create a
+              business landing page, and I chose a pet store as I am a big
+              animal lover.
             </p>
           ),
         },
@@ -33,18 +36,16 @@ export const ProjectProvider = ({ children }) => {
                 <strong>Flexbox Layout:</strong> Used flexbox to design and
                 build the layout for the company's homepage.
               </li>
-              <li>
-                <strong>Aesthetic Design:</strong> Created a visually appealing
-                and user-friendly interface for 'Pawfectly Pampered.'
-              </li>
+
               <li>
                 <strong>Responsive Design</strong> Ensured the website is
-                responsive across different devices for optimal user experience.
+                responsive across different devices.
               </li>
               <li>
                 <strong>Customization:</strong> Tailored the homepage design to
                 suit the theme of a pet-centered business, showcasing creativity
-                and attention to detail.
+                and attention to detail. I Incorporated color theory by using
+                complementary colors of shades of blue and brown.
               </li>
             </ul>
           ),
@@ -178,10 +179,14 @@ export const ProjectProvider = ({ children }) => {
           title: "Description",
           content: (
             <p>
-              ReaditHub is a platform where users can explore Reddit content in
-              a streamlined and user-friendly interface. Leveraging React and
-              Redux, the application seamlessly integrates with the Reddit API
-              to fetch and display posts and comments.
+              Readit-Hub is a simplified version of Reddit designed as a
+              read-only platform. Unlike Reddit, Readit-Hub doesn't require user
+              authentication and only displays the top subreddits, posts, and
+              comments without allowing user interaction. This web application
+              was built using the Reddit API snoowrap, integrated with Redux for
+              state management. Basic styling was achieved with Bootstrap. The
+              primary goal of Readit-Hub was to enhance my skills in working
+              with Redux and APIs.
             </p>
           ),
         },
@@ -192,24 +197,22 @@ export const ProjectProvider = ({ children }) => {
           content: (
             <ul>
               <li>
-                <strong>Reddit API Integration:</strong>ReaditHub fetches data
-                from the Reddit API, enabling users to access a wide range of
-                posts and comments.
+                <strong>Reddit API Integration:</strong> ReaditHub fetches data
+                from Reddit using snoowrap, enabling users to access a wide
+                range of subreddits, posts and comments.
               </li>
               <li>
-                <strong>Post Viewing:</strong> Users can view posts along with
-                their associated comments, providing a comprehensive Reddit
-                browsing experience.
+                <strong>Post Viewing:</strong> Users can view detailed posts
+                along with their associated comments.
               </li>
               <li>
                 <strong>Search Functionality:</strong> The application offers a
                 search feature, allowing users to search for specific posts or
-                topics within Reddit.
+                subreddits within Reddit.
               </li>
               <li>
                 <strong>Responsive Design:</strong> ReaditHub is designed to be
-                responsive, ensuring a smooth browsing experience across
-                devices.
+                responsive, ensuring mobile friendliness.
               </li>
             </ul>
           ),

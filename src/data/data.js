@@ -142,15 +142,15 @@ export const SKILLS = [
 
 export const COURSES = [
   {
-    id: "course1",
-    name: "Front-End Engineer Career Path",
-    institute: "Codecademy",
-    icon: "simple-icons:codecademy",
-    completed: true,
-    year: 2024,
-    certificate:
-      "https://www.codecademy.com/profiles/ellenevdm/certificates/2682884a0719474f96407efe432fdd87",
+    id: "course3",
+    name: "Vue - The Complete Guide",
+    institute: "Udemy",
+    icon: "simple-icons:udemy",
+    completed: false,
+    year: "...",
+    certificate: null,
   },
+
   {
     id: "course2",
     name: "React - The Complete Guide",
@@ -162,13 +162,41 @@ export const COURSES = [
       "https://www.udemy.com/certificate/UC-cfc64e46-8059-42a0-99c4-8773c4a12772/",
   },
   {
-    id: "course3",
-    name: "Vue - The Complete Guide",
-    institute: "Udemy",
-    icon: "simple-icons:udemy",
-    completed: false,
-    year: "...",
-    certificate: "",
+    id: "course1",
+    name: "Front-End Engineer Career Path",
+    institute: "Codecademy",
+    icon: "simple-icons:codecademy",
+    completed: true,
+    year: 2024,
+    certificate:
+      "https://www.codecademy.com/profiles/ellenevdm/certificates/2682884a0719474f96407efe432fdd87",
+  },
+  {
+    id: "degree1",
+    name: "BCom Business Management",
+    institute: "Prestige Academy (STADIO)",
+    icon: "icon-park-outline:degree-hat",
+    completed: true,
+    year: 2020,
+    certificate: null,
+  },
+  {
+    id: "course5",
+    name: "TEFL",
+    institute: "ITT International TEFL and TESOL Ltd",
+    icon: "icon-park-outline:certificate",
+    completed: true,
+    year: 2021,
+    certificate: null,
+  },
+  {
+    id: "course4",
+    name: "Feature Writing",
+    institute: "GetSmarter",
+    icon: "icon-park-outline:certificate",
+    completed: true,
+    year: 2017,
+    certificate: null,
   },
 ];
 
