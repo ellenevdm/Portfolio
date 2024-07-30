@@ -298,11 +298,6 @@ export const LISTS = [
 
     title: "Interests",
     icon: "mdi:heart",
-    content: [
-      "Spending Time In Nature",
-      "My Pets",
-      "Travelling & Exploring",
-      "Baking",
-    ],
+    content: ["Nature", "Pets", "Travelling", "Baking"],
   },
 ];
