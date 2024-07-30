@@ -274,7 +274,7 @@ export const LISTS = [
   {
     id: "goals",
     key: "1",
-    title: "Future Goals",
+    title: "Goals",
     icon: "mdi:target-arrow",
     content: [
       "Learn Vue.js",
@@ -288,7 +288,7 @@ export const LISTS = [
     id: "values",
     key: "2",
 
-    title: "Personal Values",
+    title: "Values",
     icon: "mdi:compass-rose",
     content: ["Respect", "Honesty", "Authenticity"],
   },
@@ -296,7 +296,7 @@ export const LISTS = [
     id: "hobbies",
     key: "3",
 
-    title: "Hobbies and Interests",
+    title: "Interests",
     icon: "mdi:heart",
     content: [
       "Spending Time In Nature",

@@ -28,8 +28,7 @@
         font-size: 1.5em;
         text-align: center;
       }
-      h4 {
-      }
+
       span {
         font-size: 18px;
         font-weight: bold;
@@ -144,11 +143,11 @@
     .new-game {
       width: 80%;
       font-weight: 800;
-      // @include box-shadow;
-      background-color: $secondary;
+      @include box-shadow;
+      background-color: $secondary-darker;
       text-transform: uppercase;
-      border: 1px solid black;
-      // color: white;
+      // border: 1px solid white;
+      color: white;
       letter-spacing: 1px;
     }
   }
