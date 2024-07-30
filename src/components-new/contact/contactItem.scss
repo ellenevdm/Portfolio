@@ -1,0 +1,78 @@
+@use "../../sass/abstracts" as *;
+
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 15px;
+  width: 90%;
+  @include border-rounded;
+  background-color: $primary-alpha-20;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  @include box-shadow;
+  background-color: $secondary-lighter;
+  // color: white;
+
+  .copy-info {
+    width: 100%;
+    display: flex;
+    // text-align: right;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    .text {
+      display: none;
+      width: 100%;
+      text-overflow: ellipsis;
+      // text-align: end;
+      font-size: 0.75em;
+      overflow: hidden;
+      text-wrap: nowrap;
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      margin: 0;
+      color: $accent;
+      font-size: 1.2em;
+    }
+
+    &:hover {
+      .text {
+        display: inline-block;
+        overflow: hidden;
+      }
+      .label {
+        display: none;
+      }
+    }
+  }
+}
+
+@include screen("small") {
+  .contact-item {
+    max-width: 7em;
+    padding-right: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    .copy-info {
+      display: flex;
+      justify-content: center;
+      .label,
+      .text {
+        display: none;
+      }
+      &:hover {
+        .label,
+        .text {
+          display: none;
+        }
+      }
+    }
+  }
+}

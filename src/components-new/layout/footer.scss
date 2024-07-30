@@ -1,0 +1,96 @@
+@import "../../sass/abstracts";
+footer {
+  position: fixed;
+  width: 100%;
+  background-color: $background;
+  bottom: 0px;
+  height: 40px;
+  left: 0px;
+  border: 1px solid black;
+  display: flex;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      .label {
+        display: none;
+        font-size: small;
+      }
+      &:hover {
+        .label {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  z-index: 1000;
+  right: 10px;
+  // height: 100%;
+  ul {
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+      a {
+        display: flex;
+        // height: 50px;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .label {
+        display: none;
+        position: absolute;
+        right: calc(100% - 50px);
+        font-size: small;
+        font-weight: semi-bold;
+        background-color: $primary;
+        color: white;
+        padding: 2px 5px;
+        @include border-rounded;
+      }
+      a:hover + .label {
+        display: block;
+      }
+    }
+  }
+}
+@include screen("small") {
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    background-color: $background;
+    bottom: 0px;
+    height: 20px;
+
+    border-top: 1px solid white;
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      div {
+        margin: 2px;
+        a {
+          font-size: 10px;
+        }
+        .label {
+          display: none;
+        }
+        a:hover + .label {
+          display: none;
+        }
+      }
+    }
+  }
+}

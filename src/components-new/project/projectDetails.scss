@@ -1,0 +1,55 @@
+@use "../../sass/abstracts" as *;
+
+.project {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  .project-details {
+    background-color: $secondary-alpha-20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+
+    padding: 20px;
+    @include border-rounded;
+    .accordion {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      .accordion-item {
+        width: 100%;
+        background-color: $secondary-alpha-20;
+        @include border-rounded;
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 100%;
+    button {
+      margin: 5px;
+    }
+  }
+  img {
+    flex: 1;
+  }
+
+  @include screen("small") {
+    .project-details {
+      width: 100%;
+      margin: 5px;
+      .project-accordion {
+        width: 100%;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}

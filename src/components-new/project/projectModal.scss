@@ -1,0 +1,64 @@
+@use "../../sass/abstracts" as *;
+.project-modal {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include border-rounded;
+  padding: 0px;
+
+  position: relative;
+
+  border: none;
+  margin: auto;
+  .error-message {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .error-buttons {
+      display: flex;
+      button {
+        margin: 10px;
+      }
+    }
+  }
+  .project-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    margin: 0px;
+    padding: 0;
+    // background-color: $secondary;
+
+    display: flex;
+    justify-content: center;
+    iframe {
+      width: 100%;
+      // height: 95%;
+      margin: 0.5rem;
+      padding: 0px;
+      border-width: 0px;
+      @include border-rounded;
+    }
+    .project-modal-buttons {
+      -webkit-box-shadow: -2px 0px 7px 0px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: -2px 0px 7px 0px rgba(0, 0, 0, 0.7);
+      box-shadow: -2px 0px 7px 0px rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      background-color: $primary;
+      button {
+        margin: 2px 2px;
+        background-color: $primary;
+        color: white;
+        .proj-modal-icon {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
