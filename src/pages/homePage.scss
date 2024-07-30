@@ -1,0 +1,50 @@
+@use "../sass/abstracts" as *;
+
+.home-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: auto;
+
+  .home-compnt {
+    padding: 20px;
+    margin: 30px 0px;
+    @include border-rounded;
+  }
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin-right: 50px;
+    text-align: left;
+
+    h1 {
+      font-size: $display-font-size;
+      word-spacing: 10px;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    @include screen("small") {
+      max-width: 100%;
+      margin-right: unset;
+      h1 {
+        font-size: $heading-1-size;
+      }
+
+      .intro-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .download-btn {
+          width: 150px;
+          justify-self: center;
+        }
+      }
+    }
+  }
+}

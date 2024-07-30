@@ -1,0 +1,148 @@
+@import "../../sass/abstracts";
+
+.header {
+  width: 100%;
+  background-color: $background;
+  border-bottom: 1px solid white;
+  max-height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  margin: 0;
+  .nav-bar {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 2%;
+    .logo-container {
+      display: flex;
+      align-items: flex-end;
+      @include font($righteous);
+
+      .name {
+        // font-weight: bold;
+        margin-left: 0;
+        font-size: 1.5em;
+      }
+      .logo {
+        font-size: 2.7em;
+
+        width: 40px;
+        height: 40px;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .portfolio {
+      @include font($righteous);
+      font-size: 1.5em;
+      color: $primary;
+      justify-self: center;
+    }
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 10px;
+      li:not(:last-child) {
+        .nav-link {
+          text-decoration: none;
+          font-weight: bold;
+          color: $text;
+          padding: 5px;
+
+          &.active {
+            border-bottom: 2px solid $accent;
+          }
+          &:hover {
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
+}
+@include screen("small") {
+  .header .nav-bar .nav-list li:not(:last-child) .nav-link.active {
+    border-bottom: none;
+    color: $accent;
+  }
+  .header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .nav-bar {
+      width: 100%;
+      .logo-container {
+        .name {
+          // font-size: 1.2em;
+          display: none;
+        }
+      }
+      .portfolio {
+        display: none;
+      }
+      .menu-btn {
+        display: block;
+        margin-right: 10px;
+      }
+      .nav-list {
+        display: none;
+
+        .nav-link {
+          display: none;
+        }
+      }
+
+      .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style: none;
+        left: 0;
+        padding: 0;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+        // backdrop-filter: ;
+        position: fixed;
+        backdrop-filter: blur(5px);
+        background-color: $secondary-alpha-80;
+        left: 0;
+        height: 100%;
+        z-index: 99;
+        top: 50px;
+        margin: 0;
+        .contact-btn {
+          width: 100%;
+        }
+
+        li:not(:last-child) {
+          margin-right: 0px;
+        }
+        .link-mobile {
+          padding: 32px;
+          width: 100%;
+          transition: all 0.5s ease-in-out;
+          text-align: center;
+          display: block !important;
+          margin: 0 0 0 0;
+          font-size: large;
+        }
+      }
+    }
+  }
+}

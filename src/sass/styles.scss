@@ -2,80 +2,94 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	background-color: $background;
-	height: 100%;
-	font-size: 16px;
+  @include font($montserrat);
 }
 
 body {
-	color: $text;
-	padding-top: 100px;
-	background-size: cover;
-	height: 100%;
-	max-width: 100%;
-	margin: 0;
-	overflow: scroll;
-	@include font($montserrat);
+  background-color: $background;
+  margin: 0 auto;
+  padding: 0;
+  text-align: justify;
+  display: block;
+  color: $text;
+  font-size: 16px;
+  @include screen("small") {
+    font-size: 14px;
+  }
 }
-
-button {
-	cursor: pointer;
-}
-a {
-	text-decoration: none;
-	color: $accent;
-	font-weight: 600;
-}
-
-ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.page {
-	margin: auto;
-	width: 80%;
-	height: 100%;
-	padding-bottom: 5%;
-	justify-content: center;
-}
-
-// <uniquifier>: Use a unique and descriptive class name
 
 h1 {
-	@include font($righteous, $heading-1-size);
-	text-transform: uppercase;
-	text-align: center;
+  @include font($righteous, $heading-1-size);
+  font-size: $display-font-size;
+  word-spacing: 10px;
+  text-transform: uppercase;
+  @include screen("small") {
+    font-size: $heading-1-size;
+  }
 }
 
 h2 {
-	text-align: center;
-	@include font($righteous, $heading-2-size);
+  font-size: $heading-2-size;
 }
+
 h3 {
-	@include font($montserrat, $heading-3-size, $font-weight-semibold);
-	text-decoration: wavy;
+  font-size: $heading-3-size;
 }
 
-.gradient-text {
-	background: linear-gradient(120deg, $primary, $accent);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: center;
 }
 
-.outline-text {
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: $text;
-	color: transparent;
-	font-style: italic;
+ul {
+  list-style: none;
 }
 
-.info-text {
-	font-size: 12px;
-	font-weight: $font-weight-light;
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: auto;
+  height: calc(100vh - 50px);
+  .inner-page {
+    min-height: 100%;
+    padding-bottom: 30px;
+    display: flex;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    scroll-margin-top: 0px;
+  }
+}
+
+.gradient {
+  background: linear-gradient(120deg, $primary, $accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: transparent;
+  font-style: italic;
 }
