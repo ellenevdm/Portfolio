@@ -80,6 +80,10 @@ a {
     position: relative;
     scroll-margin-top: 0px;
   }
+  @include screen("small") {
+    height: calc(100vh - 100spx);
+    margin-bottom: 40px;
+  }
 }
 
 .gradient {

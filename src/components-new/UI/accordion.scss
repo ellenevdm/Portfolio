@@ -31,8 +31,8 @@
     }
   }
   .accordion-content {
-    padding: 10px;
-    @include border-rounded;
+    padding: 20px;
+    // @include border-rounded;
     text-align: left;
 
     .proj-tech {
@@ -164,10 +164,13 @@
     }
     .personal-item {
       display: flex;
-      gap: 1em;
-      margin-bottom: 10px;
-      justify-content: flex-start;
-      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+      justify-content: start;
+
+      align-items: flex-start;
+
+      width: 200px;
       .list-icon {
         color: $primary;
         font-size: 1.1em;

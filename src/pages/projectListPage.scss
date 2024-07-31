@@ -1,0 +1,47 @@
+@use "../sass/abstracts" as *;
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+  .project-card {
+    background-color: $secondary-alpha-20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 15px;
+    border: none;
+    max-width: 400px;
+    height: 400px;
+    padding: 1rem 0;
+
+    @include border-rounded;
+    h2 {
+      text-decoration: none;
+      color: black;
+      margin-bottom: 0px;
+      padding-bottom: 0;
+    }
+    .list-mockup {
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-end;
+      img {
+        margin-top: 0px;
+        padding: 0;
+        width: 100%;
+      }
+    }
+    &:hover {
+      @include box-shadow;
+      background-color: $secondary-alpha-40;
+      transform: translate(0, -2px);
+      transition: transform ease 0.2s;
+    }
+  }
+}

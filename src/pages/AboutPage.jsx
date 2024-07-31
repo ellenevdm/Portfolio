@@ -84,14 +84,12 @@ export default function AboutPage() {
                 <h2>Personally</h2>{" "}
                 <p>
                   {" "}
-                  Growing up in an Afrikaans household and attending English
-                  schools has made me fully bilingual in both languages,
-                  enriching my communication skills. Currently, English is the
-                  main language in our home which I share with my husband and
-                  our three adorable fur-babies—Tabs and Grey, our two cats, and
-                  Luna, our black Pomeranian. I approach life with curiosity,
-                  honesty, and a good sense of humor, which ensures my life to
-                  never be boring but also sincere.
+                  I grew up in an Afrikaans household and attended English
+                  schools, allowing me to speak fluently in both languages.
+                  Currently, I am excited for a new adventure as I am moving to
+                  Cape Town with my husband and our 3 fur-kids. I always try to
+                  approach life with curiosity, honesty and a good sense of
+                  humor, ensuring life is always interesting.
                 </p>
               </span>
               <PersonalSection />

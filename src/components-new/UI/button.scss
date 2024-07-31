@@ -5,20 +5,22 @@
   // Padding inside button
   border: none;
   @include border-rounded;
-
-  padding: 0.75em;
+  letter-spacing: 1px;
+  @include font($montserrat);
+  padding: 0.5em;
+  font-weight: 500;
 
   &-primary {
     background-color: $primary;
     color: white;
-    padding: 0.75em 2em;
+    padding: 0.5em 1.5em;
     &:hover {
       background-color: $primary-darken;
     }
   }
   &-secondary {
     background-color: $secondary;
-    padding: 0.75em 2em;
+    padding: 0.5em 1.5em;
     color: white;
     &:hover {
       background-color: $secondary-darken;

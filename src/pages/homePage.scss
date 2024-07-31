@@ -32,6 +32,8 @@
     @include screen("small") {
       max-width: 100%;
       margin-right: unset;
+      margin-top: 0px;
+
       h1 {
         font-size: $heading-1-size;
       }
