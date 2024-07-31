@@ -12,6 +12,9 @@
 
   border: none;
   margin: auto;
+  .close-button {
+    color: white;
+  }
   .error-message {
     width: 80%;
     display: flex;
@@ -58,6 +61,17 @@
         .proj-modal-icon {
           font-size: 20px;
         }
+      }
+    }
+  }
+  @include screen("small") {
+    border-radius: 0px;
+    position: sticky;
+    .project-container {
+      iframe {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
       }
     }
   }

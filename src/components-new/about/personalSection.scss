@@ -6,6 +6,9 @@
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
+  .accordion {
+    width: 350px;
+  }
 }
 @include screen("small") {
   .personal-section {
@@ -14,7 +17,7 @@
       width: 100%;
     }
     .accordion {
-      width: 80%;
+      width: 100%;
     }
   }
 }

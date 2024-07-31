@@ -41,22 +41,23 @@
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: $text;
+    color: black;
     cursor: pointer;
   }
 }
 
 @include screen("small") {
   .modal {
-    width: 90%;
-    max-width: 90%;
-    height: auto;
-    max-height: 80%;
+    position: sticky;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
     padding: 1rem;
     margin: auto;
-
+    border-radius: 0px;
     color: $text;
-    @include border-rounded;
+    bottom: 0px;
     border: none;
     overflow: auto; // Allow scrolling for content that exceeds modal size
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); // Optional shadow for visual effect

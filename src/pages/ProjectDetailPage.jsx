@@ -22,7 +22,8 @@ export default function ProjectDetailPage() {
   return (
     <div className="page">
       <button onClick={() => navigate("/projects")} className="nav-back">
-        Project List
+        <Icon icon="mdi:arrow-back" className="back-icon" />
+        Back
       </button>
       <div className="inner-page">
         {/* <ProjectDetails />
@@ -40,22 +41,25 @@ export default function ProjectDetailPage() {
               <Button
                 primary
                 icon="icon-park-outline:preview-open"
+                iconClass="proj-detail-icon"
                 onClick={() => openProjectModal(project)}
               >
-                Open Preview
+                Preview
               </Button>
               <Button
                 secondary
                 icon="ic:round-open-in-new"
+                iconClass="proj-detail-icon"
                 onClick={() =>
                   window.open(project.link, "_blank", "noopener noreferrer")
                 }
               >
-                Visit Live Site
+                Live
               </Button>
               <Button
                 secondary
                 icon="simple-icons:github"
+                iconClass="proj-detail-icon"
                 onClick={() =>
                   window.open(
                     project.githubRepo,
@@ -64,7 +68,7 @@ export default function ProjectDetailPage() {
                   )
                 }
               >
-                Github Repo
+                Github
               </Button>
             </div>
           </div>

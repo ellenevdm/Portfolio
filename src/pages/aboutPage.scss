@@ -17,7 +17,7 @@
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: scroll;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 40px);
   background-color: $primary-alpha-30;
   h1 {
     font-size: $display-font-size;
@@ -48,7 +48,17 @@
   #section2 {
     p {
       a {
-        color: $accent;
+        color: $text;
+        font-weight: 600;
+        text-decoration-color: $accent;
+        text-decoration-line: underline;
+        text-decoration-thickness: 1.2px;
+        // text-;
+
+        &:hover {
+          color: $accent;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -105,7 +115,9 @@
       justify-content: center;
       align-items: center;
       left: 50%;
+
       color: $secondary;
+      transform: translate(-50%);
 
       .arrow {
         font-size: 1.2rem;
@@ -123,21 +135,27 @@
 
   @include screen("small") {
     background-color: $background;
-
+    height: calc(100vh - 80px);
     h1 {
       font-size: $heading-1-size;
+      text-align: left;
     }
     h2 {
       font-size: $heading-2-size;
+      text-align: left;
     }
     #section1 {
+      width: 100%;
       text-align: center;
+      padding-bottom: 50px;
+      align-items: center;
+      justify-content: center;
       .section1-content {
         width: 100%;
         text-align: center;
         align-self: center;
         h1 {
-          text-align: center;
+          text-align: left;
         }
         p {
           margin-top: auto;
@@ -147,15 +165,22 @@
         }
       }
     }
+    #section2 {
+      text-align: left;
+      align-items: center;
+      justify-content: center;
+    }
     #section3 {
       align-items: center;
-
+      justify-content: center;
+      padding-bottom: 75px;
+      width: 100%;
       .section3-content {
         width: 100%;
         text-align: left;
         margin-right: auto;
         h2 {
-          text-align: center;
+          text-align: left;
         }
         section {
           flex-direction: column;
@@ -166,6 +191,9 @@
           }
         }
       }
+    }
+    .nav-btn {
+      align-self: center;
     }
   }
 }

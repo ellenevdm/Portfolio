@@ -21,8 +21,8 @@ export default function Button({
 
   return (
     <button className={classes} {...props}>
-      <span> {children} </span>
       <Icon icon={icon} className={iconClass} />
+      <span> {children} </span>
     </button>
   );
 }

@@ -122,17 +122,21 @@
         backdrop-filter: blur(5px);
         background-color: $background-alpha-60;
         left: 0;
-        // height: 100%;
+        height: calc(100vh - 50px);
         z-index: 99;
         top: 50px;
         margin: 0;
         .contact-btn {
           width: 100%;
           border-radius: 0px;
+          height: 10%;
+          font-weight: 600;
+          font-size: 18px;
         }
 
         li:not(:last-child) {
           margin-right: 0px;
+          padding-top: 50px;
         }
         .link-mobile {
           padding: 32px;

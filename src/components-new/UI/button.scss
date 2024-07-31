@@ -7,6 +7,7 @@
   @include border-rounded;
   letter-spacing: 1px;
   @include font($montserrat);
+
   padding: 0.5em;
   font-weight: 500;
 
@@ -29,5 +30,6 @@
   &:hover {
     transform: translate(0px, -2px);
     transition: transform ease 0.2s;
+    font-weight: 600;
   }
 }
