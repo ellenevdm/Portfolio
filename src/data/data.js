@@ -200,44 +200,6 @@ export const COURSES = [
   },
 ];
 
-// Project page data
-
-export const PROJECTS = [
-  {
-    id: "proj1",
-    key: "1",
-    name: "Pawfectly Pampered",
-    description:
-      'Merging my passion for pets with front-end development, I created a captivating online hub for "Pawfectly Pampered," uniting aesthetics with function.',
-    technologies: ["CSS", "HTML5"],
-    link: "https://pawfectly-pampered.netlify.app/",
-    imageResp: "pawResp",
-    imageMock: "pawMock",
-    responsive: true,
-  },
-  {
-    id: "proj2",
-    key: "2",
-    name: "Jammming",
-    description: "playlist creator for spotify",
-    technologies: ["CSS", "REACT"],
-    link: "https://evdmjammmingapp.netlify.app/",
-    imageMock: "jamMock",
-    imageResp: "jamMock",
-    responsive: false,
-  },
-  {
-    id: "proj3",
-    key: "3",
-    name: "Readit-Hub",
-    description: "reddit clone simplified version",
-    technologies: ["BOOTSTRAP", "REACT", "REDUX"],
-    link: "https://readit-hub.netlify.app/",
-    imageMock: "readMock",
-    imageResp: "readResp",
-    responsive: true,
-  },
-];
 
 export const SOCIALS = [
   {
@@ -301,3 +263,43 @@ export const LISTS = [
     content: ["Nature", "Pets", "Travelling", "Baking"],
   },
 ];
+
+// Project page data
+
+// export const PROJECTS = [
+//   {
+//     id: "proj1",
+//     key: "1",
+//     name: "Pawfectly Pampered",
+//     description:
+//       'Merging my passion for pets with front-end development, I created a captivating online hub for "Pawfectly Pampered," uniting aesthetics with function.',
+//     technologies: ["CSS", "HTML5"],
+//     link: "https://pawfectly-pampered.netlify.app/",
+//     imageResp: "pawResp",
+//     imageMock: "pawMock",
+//     responsive: true,
+//   },
+//   {
+//     id: "proj2",
+//     key: "2",
+//     name: "Jammming",
+//     description: "playlist creator for spotify",
+//     technologies: ["CSS", "REACT"],
+//     link: "https://evdmjammmingapp.netlify.app/",
+//     imageMock: "jamMock",
+//     imageResp: "jamMock",
+//     responsive: false,
+//   },
+//   {
+//     id: "proj3",
+//     key: "3",
+//     name: "Readit-Hub",
+//     description: "reddit clone simplified version",
+//     technologies: ["BOOTSTRAP", "REACT", "REDUX"],
+//     link: "https://readit-hub.netlify.app/",
+//     imageMock: "readMock",
+//     imageResp: "readResp",
+//     responsive: true,
+//   },
+// ];
+
