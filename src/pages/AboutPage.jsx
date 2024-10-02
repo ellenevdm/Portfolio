@@ -86,7 +86,7 @@ export default function AboutPage() {
                   {" "}
                   I grew up in an Afrikaans household and attended English
                   schools, allowing me to speak fluently in both languages.
-                  Currently, I am excited for a new adventure as I am moving to
+                  Currently, I am excited for a new adventure as I recently moved to
                   Cape Town with my husband and our 3 fur-kids. I always try to
                   approach life with curiosity, honesty and a good sense of
                   humor, ensuring life is always interesting.
