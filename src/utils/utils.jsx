@@ -17,6 +17,7 @@ import pawResp from "../assets/Images/pawResp.png";
 import readMock from "../assets/Images/readMock.png";
 import readResp from "../assets/Images/readResp.png";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { LogosTypescript } from "../assets/Svgs/TypeScriptIcon";
 
 export function renderMockup(image) {
   switch (image) {
@@ -56,6 +57,8 @@ export function renderSkillLogo(icon, className) {
       return <LogosReactRouter className={className} />;
     case "sass":
       return <LogosSass className={className} />;
+    case "typescript":
+      return <LogosTypescript className={className} />;
     default:
       return null;
   }

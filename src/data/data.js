@@ -150,7 +150,16 @@ export const COURSES = [
     year: "...",
     certificate: null,
   },
-
+  {
+    id: "course5",
+    name: "React & Typescript - The Practical Guide",
+    institute: "Udemy",
+    icon: "simple-icons:udemy",
+    completed: true,
+    year: 2024,
+    certificate:
+      "https://www.udemy.com/certificate/UC-49f7272f-ec51-49be-8354-d274858639a8/",
+  },
   {
     id: "course2",
     name: "React - The Complete Guide",
@@ -181,15 +190,6 @@ export const COURSES = [
     certificate: null,
   },
   {
-    id: "course5",
-    name: "TEFL",
-    institute: "ITT International TEFL and TESOL Ltd",
-    icon: "icon-park-outline:certificate",
-    completed: true,
-    year: 2021,
-    certificate: null,
-  },
-  {
     id: "course4",
     name: "Feature Writing",
     institute: "GetSmarter",
@@ -199,7 +199,6 @@ export const COURSES = [
     certificate: null,
   },
 ];
-
 
 export const SOCIALS = [
   {
@@ -260,7 +259,7 @@ export const LISTS = [
 
     title: "Interests",
     icon: "mdi:heart",
-    content: ["Nature", "Pets", "Travelling", "Baking"],
+    content: ["Outdoors", "Animals", "Travelling", "Baking"],
   },
 ];
 
@@ -302,4 +301,3 @@ export const LISTS = [
 //     responsive: true,
 //   },
 // ];
-
