@@ -138,6 +138,11 @@ export const SKILLS = [
     icon: "sass",
     level: 3,
   },
+  {
+    id: "typescript",
+    name: "TYPESCRIPT",
+    icon: "typescript",
+  },
 ];
 
 export const COURSES = [
