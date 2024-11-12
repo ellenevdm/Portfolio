@@ -142,6 +142,7 @@ export const SKILLS = [
     id: "typescript",
     name: "TYPESCRIPT",
     icon: "typescript",
+    level: 4,
   },
 ];
 
