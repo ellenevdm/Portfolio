@@ -144,6 +144,18 @@ export const SKILLS = [
     icon: "typescript",
     level: 4,
   },
+  {
+    id: "tailwind",
+    name: "TAILWIND CSS",
+    icon: "tailwind",
+    level: 3,
+  },
+  {
+    id: "nextjs",
+    name: "NEXT JS",
+    icon: "nextjs",
+    level: 1,
+  },
 ];
 
 export const COURSES = [

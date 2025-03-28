@@ -1,3 +1,4 @@
+import React from "react";
 import "./projectDetailPage.scss";
 
 // import ProjectDetails from "../components-new/project/ProjectDetails";
@@ -19,6 +20,20 @@ export default function ProjectDetailPage() {
   const { projects } = useProject();
   const navigate = useNavigate();
   const project = projects.find((project) => project.id === id);
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    if (!project?.imageResp) {
+      setIsLoading(false); // Stop loading if no image is provided
+      return;
+    }
+
+    const image = new Image();
+    image.src = project.imageResp;
+    image.onload = () => setIsLoading(false);
+    image.onerror = () => setIsLoading(false); // Handle image load errors
+  }, [project?.imageResp]);
+
   return (
     <div className="page">
       <button onClick={() => navigate("/projects")} className="nav-back">
@@ -26,8 +41,6 @@ export default function ProjectDetailPage() {
         Back
       </button>
       <div className="inner-page">
-        {/* <ProjectDetails />
-         */}
         <div className="project">
           <div className="project-details">
             <h2>{project.name}</h2>
@@ -72,7 +85,14 @@ export default function ProjectDetailPage() {
               </Button>
             </div>
           </div>
-          {renderMockup(project.imageResp)}
+          {isLoading ? (
+            <div className="spinner">
+              <div className="spinner-circle"></div>
+              <p>Loading...</p>
+            </div>
+          ) : (
+            renderMockup(project.imageResp)
+          )}
         </div>
       </div>
     </div>

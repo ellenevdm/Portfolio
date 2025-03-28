@@ -18,6 +18,8 @@ import readMock from "../assets/Images/readMock.png";
 import readResp from "../assets/Images/readResp.png";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { LogosTypescript } from "../assets/Svgs/TypeScriptIcon";
+import { LogosTailwindcss } from "../assets/Svgs/TailwindCssIcon";
+import { LogosNextjs } from "../assets/Svgs/NextJS";
 
 export function renderMockup(image) {
   switch (image) {
@@ -59,6 +61,10 @@ export function renderSkillLogo(icon, className) {
       return <LogosSass className={className} />;
     case "typescript":
       return <LogosTypescript className={className} />;
+    case "tailwind":
+      return <LogosTailwindcss className={className} />;
+    case "nextjs":
+      return <LogosNextjs className={className} />;
     default:
       return null;
   }
