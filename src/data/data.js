@@ -161,7 +161,7 @@ export const SKILLS = [
 export const COURSES = [
   {
     id: "course3",
-    name: "Vue - The Complete Guide",
+    name: "Learn NextJS 15 from the ground up",
     institute: "Udemy",
     icon: "simple-icons:udemy",
     completed: false,
@@ -255,13 +255,7 @@ export const LISTS = [
     key: "1",
     title: "Goals",
     icon: "mdi:target-arrow",
-    content: [
-      "Learn Vue.js",
-      "Learn React Native",
-      "Learn Typescript",
-      "Learn Next.js",
-      "Learn Nuxt.js",
-    ],
+    content: ["Learn Next.js", "Learn Node.js", "Learn React Native"],
   },
   {
     id: "values",

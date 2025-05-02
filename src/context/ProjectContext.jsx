@@ -17,12 +17,11 @@ export const ProjectProvider = ({ children }) => {
           title: "Description",
           content: (
             <p>
-              Pawfectly Pampered was the first website I created from scratch as
-              a project for my course. It is built using only HTML and CSS. I
-              enjoyed building this website as I explored more CSS features and
-              experimented with them. The idea of the project was to create a
-              business landing page, and I chose a pet store as I am a big
-              animal lover.
+              Pawfectly Pampered is the first website I built entirely from
+              scratch as part of a course project. Developed using only HTML and
+              CSS, this business landing page showcases a pet store theme,
+              reflecting my love for animals. This project allowed me to delve
+              deeper into CSS features and experiment with creative designs.
             </p>
           ),
         },
@@ -33,19 +32,17 @@ export const ProjectProvider = ({ children }) => {
           content: (
             <ul>
               <li>
-                <strong>Flexbox Layout:</strong> Used flexbox to design and
-                build the layout for the company's homepage.
-              </li>
-
-              <li>
-                <strong>Responsive Design</strong> Ensured the website is
-                responsive across different devices.
+                <strong>Flexbox Layout:</strong> Designed a responsive layout
+                using CSS Flexbox for the homepage.
               </li>
               <li>
-                <strong>Customization:</strong> Tailored the homepage design to
-                suit the theme of a pet-centered business, showcasing creativity
-                and attention to detail. I Incorporated color theory by using
-                complementary colors of shades of blue and brown.
+                <strong>Responsive Design:</strong> Ensured compatibility across
+                various devices and screen sizes.
+              </li>
+              <li>
+                <strong>Custom Styling:</strong> Applied complementary color
+                schemes and tailored the design to align with the pet store
+                theme.
               </li>
             </ul>
           ),
@@ -59,9 +56,12 @@ export const ProjectProvider = ({ children }) => {
               <li>
                 <span className="tech-tooltip css">CSS</span>
                 <span className="tech-icon css">
-                  {" "}
                   <Icon icon="bxl:css3" />
                 </span>
+              </li>
+              <li>
+                <span className="tech-tooltip html">HTML</span>
+                <span className="tech-icon html"></span>
               </li>
               <li>
                 {" "}
@@ -258,6 +258,100 @@ export const ProjectProvider = ({ children }) => {
       imageResp: "readResp",
       responsive: true,
       authenticationReq: false,
+    },
+    {
+      id: "proj4",
+      key: "4",
+      name: "Mini Testing Projects",
+      sections: [
+        {
+          id: "minisec1",
+          key: "1",
+          title: "Description",
+          content: (
+            <p>
+              The Mini Testing Project is a larger, ongoing project made up of
+              several smaller apps—including a counter, quiz, quote generator,
+              and to-do app. I built it using Next.js to help solidify my
+              understanding of the framework while practicing real-world
+              implementations. My primary goal was to develop and improve my
+              testing skills using Jest and React Testing Library. I'm
+              continuously expanding this project as I explore new Next.js
+              features, including routing and component design, while
+              reinforcing my testing workflow.
+            </p>
+          ),
+        },
+        {
+          id: "minisec2",
+          key: "2",
+          title: "Features",
+          content: (
+            <ul>
+              <li>
+                <strong>Counter App </strong> A simple counter with increment,
+                decrement and reset functionality using react-hook.
+              </li>
+              <li>
+                <strong>Quiz App</strong> A quiz app that allows users to answer
+                questions with multiple choices using useState and useEffect
+                hooks.
+              </li>
+              <li>
+                <strong>Todo App</strong> A task management app that allows
+                users to organise tasks with categories.
+              </li>
+              <li>
+                <strong>Quote Generator</strong> Fetches random quotes from an
+                API.
+              </li>
+              <li>
+                <strong>Testing</strong> All component functionality is tested
+                using Jest and React Testing Library.
+              </li>
+            </ul>
+          ),
+        },
+        {
+          id: "minisec3",
+          key: "3",
+          title: "Technologies",
+          content: (
+            <ul className="proj-tech">
+              <li>
+                <span className="tech-tooltip tailwind">Tailwind</span>
+                <span className="tech-icon tailwind">
+                  <Icon icon="bxl:tailwind-css" />
+                </span>
+              </li>
+              <li>
+                <span className="tech-tooltip next">Next</span>
+                <span className="tech-icon next">
+                  <Icon icon="devicon-plain:nextjs" />
+                </span>
+              </li>
+              <li>
+                <span className="tech-tooltip react">React</span>
+                <span className="tech-icon react">
+                  <Icon icon="bxl:react" />
+                </span>
+              </li>
+              <li>
+                <span className="tech-tooltip jest">Jest </span>
+                <span className="tech-icon jest">
+                  {" "}
+                  <Icon icon="devicon-plain:jest" />
+                </span>
+              </li>
+            </ul>
+          ),
+        },
+      ],
+      link: "https://mini-testing-projects.netlify.app/",
+      githubRepo: "https://github.com/ellenevdm/mini-projects",
+      imageMock: "miniMock",
+      imageResp: "miniMock",
+      responsive: true,
     },
   ];
 

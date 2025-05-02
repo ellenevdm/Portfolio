@@ -88,6 +88,15 @@
           &.reddit {
             color: #f74300;
           }
+          &.jest {
+            color: #c21325;
+          }
+          &.tailwind {
+            color: #38bdf8;
+          }
+          &.next {
+            color: #000000;
+          }
         }
         .tech-tooltip {
           // display: none;
@@ -124,6 +133,15 @@
           &.reddit {
             background-color: #f74300;
           }
+          &.jest {
+            background-color: #c21325;
+          }
+          &.tailwind {
+            background-color: #38bdf8;
+          }
+          &.next {
+            background-color: #000000;
+          }
         }
 
         &:hover {
@@ -151,6 +169,15 @@
             }
             &.reddit {
               background-color: #f74300;
+            }
+            &.jest {
+              background-color: #c21325;
+            }
+            &.tailwind {
+              background-color: #38bdf8;
+            }
+            &.next {
+              background-color: #000000;
             }
           }
           .tech-tooltip {

@@ -16,6 +16,7 @@ import pawMock from "../assets/Images/pawMock.png";
 import pawResp from "../assets/Images/pawResp.png";
 import readMock from "../assets/Images/readMock.png";
 import readResp from "../assets/Images/readResp.png";
+import miniMock from "../assets/Images/miniMock.png";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { LogosTypescript } from "../assets/Svgs/TypeScriptIcon";
 import { LogosTailwindcss } from "../assets/Svgs/TailwindCssIcon";
@@ -33,6 +34,8 @@ export function renderMockup(image) {
       return <img src={pawResp} alt="paw" />;
     case "readResp":
       return <img src={readResp} alt="read" />;
+    case "miniMock":
+      return <img src={miniMock} alt="mini" />;
     default:
       return null;
   }
